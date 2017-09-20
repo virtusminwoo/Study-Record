@@ -1,0 +1,705 @@
+body { 
+            overflow-x: hidden; 
+            background: url(./images/mainPhotoTop.png);
+            background-repeat:no-repeat;
+            background-position: top 60px left 45%;
+            background-size: 2650px 570px;
+            
+        }
+        
+
+
+*{
+    margin : 0 auto;
+    padding : 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color : black;
+}
+
+
+.MainIconDiv{
+    display : inline-block;
+    position : relative;
+    top : 5px;
+    left : 5px;
+}
+
+
+.MainBarDiv{
+    display : inline-block;
+    position : relative;
+    top : -1px;
+}
+
+.MainDabangProDiv{
+    display : inline-block;
+    position : relative;
+    left : 5px;
+}
+
+.MainDabangPayDiv{
+    display : inline-block;
+    position : relative;
+    top : -1px;
+    left : -3px;
+}
+
+
+.NavRoomDiv{
+    display : inline-block;
+    position : absolute;
+    right : 350px;
+    top : 20px;
+}
+
+.NavRoomDiv ul{
+    float:left;
+    padding-left: 40px;
+    font-size : 14px;
+    font-weight: 100;
+}
+
+
+.NavLoginDiv{
+    display : inline-block;
+    position : absolute;
+    right : 20px;
+    top : 20px;
+    
+}
+
+.NavLoginDiv ul{
+    float: left;
+    padding-left: 20px;
+    font-size : 12px;
+    font-weight: 100;
+}
+
+
+.MainPhotoBottomDiv{
+    position : absolute;
+    top : 628px;
+    text-align: center;
+    background-color : #595E62;
+    width : 100%;
+    height : 110px;
+}
+
+.MainPhotoBottomSearch{
+    position : relative;
+    top : 30px;
+    width : 430px;
+    height : 50px;
+    border : 0px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    text-indent : 20px;
+    font-size : 15px;
+}
+
+.MainPhotoBottomDiv div{
+    display : inline-block;
+}
+
+.MainPhotoBottomButton{
+    position : relative;
+    top : 31px;
+    width : 100px;
+    height : 51px;
+    background-color : #2579CD;
+    border : 1px solid #2579CD;
+    left : -6px;
+    color : white;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.MainPhotoBottomButton:hover{
+    background-color: #2074C8;
+}
+
+
+
+
+
+.TemaSearchSentence{
+    position : relative;
+    top : 700px;
+    width : 100%;
+    text-align: center;
+}
+
+.TemaSearchSentence h1{
+    font-size : 38px;
+}
+
+.TemaSearchSentence p{
+    font-size : 20px;
+}
+
+.TemaSentence{
+    position : relative;
+    top : -200px;
+    text-align: center;
+    color : white;
+    width : 200px;
+}
+
+.TemaSentence h3{
+    font-size : 22px;
+    margin-bottom: 20px;
+}
+.TemaSentence hr { 
+    position : relative;
+    width : 50px;
+    margin-bottom: 20px;
+}
+
+.TemaSentence p{
+    font-size : 13px;
+}
+
+
+
+.TemaSearchPhotoGroupDiv{
+    
+    height : 1000px;
+    width : 100%;
+    text-align: center;
+}
+
+
+.TemaSearchPhotoGroup{
+    position:relative;
+    width : 1000px;
+    top : 750px;
+
+    padding-left : 80px;
+}
+
+.TemaSearchPhotoGroup figure {
+    height : 300px;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+
+
+.TemaSearchTable img { 
+    width : 300px;
+    height: 300px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.TemaSearchTable figure:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.TemaSearchTable td{
+    padding : 10px;
+    margin : 20px;
+}
+
+.CarePhotoDiv {
+    position:absolute;
+    top : 1600px;
+    height : 100px;
+    background-color : #266BC2;
+    width : 100%;
+    text-align: center;
+}
+
+.CarePhotoDiv img{
+    position:relative;
+    padding-left : 100px;
+    width : 1000px;
+    height : 100px;
+}
+
+
+
+.CareDot {
+    position:absolute;
+    top : 80px;
+    right : 10%;
+    width : 15px;
+    height : 15px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 10;
+}
+
+
+
+
+.NavSiteDiv{
+    position:absolute;
+    top : 1800px;
+    width : 100%;
+    height : 320px;
+    text-align: center;
+}
+
+.NavSiteUl{
+    position : relative;
+    padding-left : 100px;
+    width : 1000px;
+    height : 320px;
+}
+
+
+
+.NavSiteUlCommon{
+    top : 0px;
+    display : inline-block;
+    width : 190px;
+    text-align: left;
+    margin-right : 5px;
+}
+
+
+.NavSiteUl h4{
+    font-size : 15px;
+    color : #585858;
+    font-weight: 600;
+}
+
+.NavSiteUl li {
+    font-size : 13px;
+    padding-top : 10px;
+    font-weight: 100;
+}
+
+.NavSiteUl li:hover {
+    text-decoration: underline;
+    color : #3B8DE0;
+}
+
+.NavSiteUl1{
+    position : relative;
+    top : -80px;
+    height : 170px;
+    
+}
+
+.NavSiteUl2{
+    position : relative;
+    top : -55px;
+    height : 194x;
+}
+
+.NavSiteUl3{
+    padding-top : 10px;
+}
+
+.NavSiteUl4{
+    position : relative;
+    top : 50px;
+}
+
+.NavSiteUl3With4{
+    position : relative;
+    top : -35px;
+    display : inline-block;
+    width : 190px;
+    height: 244px;
+}
+
+.NavSiteUl5{
+    padding-top : 10px;
+}
+
+.NavSiteUl6{
+    position : relative;
+    top : 50px;
+}
+
+.NavSiteUl5With6{
+    position : relative;
+    top : -10px;
+    display : inline-block;
+    width : 190px;
+    height: 280px;
+}
+
+.NavSiteUl7{
+    position : relative;
+    top : -140px;
+}
+
+
+
+.TableSiteDiv{
+    text-align: center;
+    position : relative;
+    top :1375px;
+    width :100%;
+}
+
+.TableSiteDivHr{
+    border :0.5px solid #D1D1D1;
+}
+
+.TableSite{
+    position : relative;
+    top:-1px;
+    border-collapse: collapse;
+    left : 70px;
+}
+
+
+
+.TableSite td{
+    font-size : 13px;
+    width : 135px;
+    height : 50px;
+    border : 1px solid #D1D1D1;
+    border-top : 0px;
+    border-bottom: 0px;
+}
+
+.TableSite td:hover{
+    background-color: #E7E7E7;
+
+}
+
+
+
+.FooterDiv{
+    position : absolute;
+    top : 2200px;
+    width : 100%;
+    height : 270px;
+    background-color : #2A2A2A;
+    text-align: center;
+}
+
+.FooterUlGroupDiv{
+    position : relative;
+    top : 75px;
+    padding-left : 100px;
+    width : 960px;
+    height : 175px;
+}
+
+.FooterUlGroupDiv li{
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.FooterUl1{
+    color : #919191;
+    display : inline-block;
+    font-size : 13px;
+    width : 285px;
+}
+
+.FooterUl1 span {
+    color : white;
+    font-weight: 800;
+}
+
+.FooterUl2{
+    color : #919191;
+    display : inline-block;
+    font-size : 13px;
+    width : 315px;
+    margin-left: 10px;
+}
+
+.FooterUl2 span:hover{
+    color : white;
+    text-decoration: underline;
+}
+
+.FooterUl3{
+    color : #919191;
+    display : inline-block;
+    font-size : 13px;
+    width : 196px;
+    margin-left: 10px;
+}
+
+
+
+.FooterImg{
+    position : relative;
+    display : inline-block;
+    top : 0px;
+    left : -30px;
+}
+
+
+.FooterUlImg1{
+    padding-bottom : 20px;
+    padding-left : 80px;
+    position : relative;
+    display : inline-block;
+    left : 10px;
+}
+
+.FooterUlImg2{
+    padding-bottom : 20px;
+    padding-left : 10px;
+    position : relative;
+    display : inline-block;
+    left : 10px;
+}
+
+
+
+.Modal {
+/*    display: none; */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+ .AllBorder{
+    position : relative;
+    margin : auto;
+    width : 350px;
+    height : 450px;
+    border-top : 4px solid #3B8DE0;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.Close {
+    position: relative;
+    right : -355px;
+    top : -55px;
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    padding : -30px;
+}
+
+.Close:hover, .Close:focus {
+    color: aqua;
+    cursor: pointer;
+}
+
+
+
+.LoginBoxTop{
+    margin-top : -60px;
+}
+
+.LoginForm{
+    padding: 15px;
+}
+
+.LoginBoxLogin{
+    margin-bottom: 5px;
+    margin-top : 25px;
+}
+
+.LoginForm h1 {
+        font-size : 23px;
+        text-align: center;
+        font-weight: 600;
+        padding : 15px;
+    }
+
+.LoginBoxLogin label{
+    font-size : 13px;
+}
+
+.LoginBoxLogin input{
+            position : relative;
+            width: 250px;
+            height : 40px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid skyblue;
+            box-sizing: border-box;
+        }
+
+.EmailId {
+    right : -27px;
+}
+
+.Password{
+    right : -15px;
+}
+
+
+.LoginButton {
+    background-color : #3588DB;
+    width : 325px;
+    height : 50px;
+    color : white;
+    border: 0;
+    margin-top : 20px;
+    border-radius : 5px;
+}
+
+.LoginButton:hover{
+    background-color : #2074C8;
+}
+
+
+
+
+
+
+
+.LoginBoxBottom{
+    padding :0px 15px;
+}
+
+.LoginOption{
+    display: block;
+    text-align: center;
+}
+
+.LoginOption li{
+    display : inline-block;
+    text-align: center;
+    font-size : 13px;
+    padding : 0px 5px;
+}
+
+.LoginOption a{
+    color : gray;
+}
+
+.KakaoLogin { 
+    margin-right: 2px;
+    background-color : yellow;
+    width : 157px;
+    height : 40px;
+    border: 1px solid black;
+    border-radius : 5px;
+}
+
+.KakaoLogin:hover  {
+    background-color : #BDAB0A;
+}
+
+.FacebookLogin { 
+    margin-left: 2px;
+    background-color : darkblue;
+    color : white;
+    width : 157px;
+    height : 40px;
+    border: 1px solid black;
+    border-radius : 5px;
+    margin-top: 25px;
+}
+
+.FacebookLogin:hover{
+    background-color : #29447F;
+}
+
+.ProRegister{
+        display : block;
+        text-align: center;
+        font-size:13px;
+        margin : -10px;
+    }
+
+
+.ConfirmEmailId{
+    z-index : 2;
+}
+
+
+
+
+
+
+
+
+    @media screen and (max-width : 1024px){
+            body{
+                overflow-x : scroll;
+                background-position: top 60px left -750px;
+            }
+            
+            .MainPhotoBottomDiv{
+                width : 100%;
+            }
+            
+            .NavRoomDiv{
+                left : 600px;
+                top : 20px;
+            }
+
+            .NavLoginDiv{
+              left : 850px;
+              top : 20px;
+            }
+
+
+            .MainPhotoBottomDiv{
+                position : absolute;
+                top : 628px;
+                text-align: center;
+                background-color : #595E62;
+                width : 1110px;
+                height : 110px;
+            }
+
+            .MainPhotoBottomSearch{
+                left : -50px;
+            }
+
+
+            .MainPhotoBottomButton{
+                left : -50px;
+            }
+            
+            .TemaSearchPhotoGroup{
+                position :absolute;
+                top : 879px;
+            }
+            .TemaSearchSentence{
+                position : absolute;
+                left : 255px;
+                top : 752px;
+                width : 500px;
+                text-align: center;
+            }
+
+            .TableSiteDiv{
+                position : absolute;
+                top :2150px;
+                width :1110px;
+            }
+
+            .TableSite{
+                left : 20px;
+                width : 955px;
+            }
+            
+            .FooterDiv{
+                width : 1110px;
+            }
+
+            .FooterUlGroupDiv{
+                padding-left : 50px;
+            }
+        }
