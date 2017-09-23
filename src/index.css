@@ -57,10 +57,11 @@ a{
     position : absolute;
     right : 350px;
     top : 20px;
+    width : 300px;
 }
 
 .NavRoomDiv ul{
-    float:left;
+    display : inline-block;
     padding-left: 40px;
     font-size : 14px;
     font-weight: 100;
@@ -72,11 +73,11 @@ a{
     position : absolute;
     right : 20px;
     top : 20px;
-    
+    width : 300px;
 }
 
 .NavLoginDiv ul{
-    float: left;
+    display : inline-block;
     padding-left: 20px;
     font-size : 12px;
     font-weight: 100;
@@ -627,6 +628,469 @@ a{
 }
 
 
+.GoogleMapDiv{
+    position : relative;
+    top : 2000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.RoomSearchWrapper{
+    position : relative;
+    overflow: hidden;
+}
+
+
+.HeaderRoomSearch{
+    height: 60px;
+}
+
+
+
+.RoomSearch{
+    position : relative;
+    display : inline-block;
+    top : -10px;
+    left : 20px;
+}
+
+.RoomSearch input{
+    font-size : 12px;
+    text-align: center;
+    color : gray;
+    width : 250px;
+    height : 30px;
+    border : 2px solid #3B8DE0;
+    border-right: none;
+}
+
+.RoomSearch button {
+    background-color: #3B8DE0;
+    width : 35px;
+    height : 34px;
+    color : white;
+    border : none;
+    position : relative;
+    left : -6px;
+    top : 2px;
+}
+.HeaderRoomSearch li{
+    float : left;
+}
+
+.ProductNav{
+    background-color: #F7F7F7;
+    height : 40px;
+    width : 100%;
+}
+
+.ProductNav li{
+    float : left;
+}
+
+
+
+.ProductNavLeftTable{
+    position : absolute;
+    left : 20px;
+    font-size : 13px;
+    border-collapse: collapse;
+    border : 1px solid gray;
+    border-top : 0px;
+    border-bottom : 0px;
+    
+}
+
+
+.ProductNavLeftTable td{
+    padding : 10px 28px;
+    border : 1px solid gray;
+    border-top : 0px;
+    border-bottom : 0px;
+    
+}
+
+.ProductNavLeftTable td:after{
+    content : "▼";
+    position :relative;
+    left : 5px;
+    color : #3B8DE0;
+}
+
+.ProductNavLeftTable td:hover{
+    background-color : white;
+}
+
+.ProductNavRight{
+    position : absolute;
+    top : 65px;
+    right : 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.RoomListDiv{
+    display: inline-block;
+    position :fixed;
+    right : 0px;
+    width : 460px;
+    height : 100%;
+    background-color: white;
+}
+
+.RoomListOverFlow{
+    height : 100%;
+    overflow-y: scroll;
+}
+
+.RoomListResult{
+    background-color : #3B8DE0;
+    height : 40px;
+}
+
+.RoomListResult p{
+    position : relative;
+    top : 10px;
+    width : 440px;
+    font-size : 14px;
+    color : white;
+}
+
+
+.RoomListResult p:before{
+    content : "▶"
+}
+
+.RoomListAd{
+    background-color: #F7F7F7;
+    height : 40px;
+}
+
+.RoomListAd p{
+    position : relative;
+    top : 10px;
+    width : 420px;
+    font-size : 14px;
+}
+
+.RoomListAd p:before{
+    content : "▶"
+}
+
+.RoomListAd a{
+    position : relative;
+    right : -400px;
+    top : -10px;
+    font-size : 14px;
+}
+
+.RoomListTable{
+    margin : 10px;
+    width : 420px;
+    border-collapse: collapse;
+}
+
+.RoomListTable td{
+    height : 120px;
+    border : 1px solid #DFDFDF;
+}
+
+.RoomListTable td:hover{
+    background-color : #D2E5FF;    
+}
+
+.RoomListTable img{
+    position : relative;
+    left : 30px;
+    top : 20px;
+    width : 110px;
+    height : 100px;
+    margin : -20px;
+}
+
+.se{
+    font-size :20px;
+    display : inline-block;
+    position : relative;
+    top : -40px;
+    left : 60px;
+}
+
+.price{
+    font-size : 20px;
+    font-weight: 500;
+    color : blue;
+    display : inline-block;
+    position : relative;
+    top : -42px;
+    left : 70px;
+}
+
+.roomDescription{
+    position : relative;
+    top : -35px;
+    left : 60px;
+    font-size : 14px;
+    width : 280px;
+}
+
+.roomPrivateDesctiption{
+    position : relative;
+    top : -10px;
+    left : 60px;
+    font-size : 14px;
+    width : 280px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.PhotoSlideDiv{
+    position : relative;
+    left : -9%;
+    width : 82%;
+}
+
+.PhotoSlideDiv img{
+    display: block;
+}
+
+
+.RoomCenterDescriptionTableDiv{
+    position : relative;
+    left : -9%;
+    width : 82%;
+}
+
+.RoomCenterDescriptionTableDiv table{
+    position : relative;
+    width : 660px;
+    border : 1px solid black;
+    border-collapse: collapse;
+    border-left : 0px;
+    border-right : 0px;
+    font-size : 14px;
+}
+
+.RoomCenterDescriptionTableDiv table caption{
+    text-align: left;
+    font-size : 20px;
+    font-weight: 900;
+    padding : 15px 0px;
+}
+
+.RoomCenterDescriptionTableDiv table td{
+    color : #929292;
+    text-align: left;
+    border : 1px solid #D1D1D1;
+    width : 130px;
+    border-left : 0px;
+    border-right : 0px;
+}
+
+.RoomCenterDescriptionTableDiv table th{
+    text-align: right;
+    border : 1px solid #D1D1D1;
+    width : 240px;
+    border-left : 0px;
+    border-right : 0px;
+    padding : 10px 0px;
+}
+
+.RoomCenterDescriptionTableRight{
+    padding-left : 30px;  
+    width : 200px;
+}
+
+
+
+.FixedRightDescriptionDiv{
+    position : fixed;
+    top : 60px;
+    display : inline-block;
+    left : 60%;
+    width : 250px;
+    padding : 40px 20px;
+    border : 1px solid #D1D1D1;
+}
+
+.FixedRightDescriptionDivTopRoom p{
+    font-size : 14px;
+}
+
+.FixedRightDescriptionDivTopButtonDiv{
+    position : relative;
+    top : 10px;
+    text-align: center;
+}
+
+.FixedRightDescriptionButton{
+    display: inline-block;
+    width : 120px;
+    height : 25px;
+    border : 1px solid black;
+    border-radius: 2px;
+}
+
+.FixedRightDescriptionDivBottom{
+    position : relative;
+    top : 20px;
+}
+
+.FixedRightDescriptionDivBottomBackground{
+    position :relative;
+    left : -20px;
+    top : 20px;
+    background-color: #F7F7F7;
+    width : 250px;
+    height : 300px;
+    padding : 20px 20px;
+    border-top : 1px solid #D1D1D1;
+}
+
+.FixedRightDescriptionDivBottomDealerPhone{
+    border : 1px solid black;
+    background-color : blue;
+    color : white;
+    text-align : center;
+    height : 40px;
+    margin-top : 20px;
+}
+
+.FixedRightDescriptionDivBottomDealerPhone p{
+    position : relative;
+    top : 10px;
+}
+
+
+
+.RoomCenterOptionDiv{
+    position : relative;
+    top : 50px;
+    left : -9%;
+    width : 82%;
+}
+
+.RoomCenterOptionDiv table{
+    position : relative;
+    width : 660px;
+    border : 0px solid black;
+    border-collapse: collapse;
+    font-size : 14px;
+}
+
+.RoomCenterOptionDiv caption{
+    text-align: left;
+    font-size : 20px;
+    font-weight: 900;
+    padding : 15px 0px;
+}
+
+
+.RoomCenterOptionDiv td{
+    width : 15px;
+    height : 15px;
+}
+
+.RoomCenterOptionDiv img{
+    display: block;
+    position : relative;
+    width : 660px;
+    
+}
+
+
+
+
+.RoomCenterDetailedDescriptionDiv{
+    position : relative;
+    top : 100px;
+    left : -9%;
+    width : 82%;
+}
+
+.RoomCenterDetailedDescription{
+    width : 660px;
+}
+
+.RoomCenterDetailedDescription p{
+    padding : 15px 0px
+}
+
+.RoomCenterGoogleMapDiv{
+    position : relative;
+    top : 150px;
+    left : -9%;
+    width : 82%;
+    
+}
+
+.RoomCenterGoogleMap{
+    position : relative;
+    width : 660px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -649,7 +1113,7 @@ a{
             }
 
             .NavLoginDiv{
-              left : 850px;
+              left : 950px;
               top : 20px;
             }
 

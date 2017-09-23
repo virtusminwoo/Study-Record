@@ -7,7 +7,9 @@ import CareGroup from './CareGroup';
 import NavSiteGroup from './NavSiteGroup';
 import TableSiteDiv from './TableSiteDiv';
 import FooterGroup from './FooterGroup';
-import RoomSearchWrapper from './RoomSearchWrapper'
+import { Route } from 'react-router-dom';
+import RoomSearchWrapper from './roomSearch/RoomSearchWrapper';
+
 
 
 
@@ -22,7 +24,7 @@ class App extends Component {
                 <NavSiteGroup />
                 <TableSiteDiv />
                 <FooterGroup />
-                <RoomSearchWrapper />
+                <Route path="/roomSearch1" component={RoomSearchWrapper}/>
             </div>
         );
     }
