@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "google-map-react": "^0.24.0",
+    "google-maps-react": "^1.1.0",
     "query-string": "^5.0.0",
     "react": "^15.6.1",
+    "react-bootstrap": "^0.31.3",
     "react-dom": "^15.6.1",
+    "react-icon": "^1.0.0",
     "react-id-swiper": "^1.4.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",

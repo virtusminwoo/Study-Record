@@ -17,8 +17,10 @@ class LoginForm extends Component {
  
     handleSubmit(e){
         if(this.state.EmailId.length === 0){
+            e.preventDefault()
             alert('이메일을 입력해주세요');
         } else if(this.state.Password.length === 0){
+            e.preventDefault()
             alert('비밀번호를 입력해주세요');
         } else {
             alert("잘입력하셨습니다")

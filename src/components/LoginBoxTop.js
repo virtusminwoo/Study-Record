@@ -1,3 +1,5 @@
+//Redux사용으로 Container사용
+
 import React, { Component } from 'react';
 import LoginForm from './LoginForm';
 

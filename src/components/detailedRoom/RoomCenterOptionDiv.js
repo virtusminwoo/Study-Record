@@ -4,7 +4,7 @@ class RoomCenterOptionDiv extends Component {
     render() {
         return (
             <div className="RoomCenterOptionDiv">
-                <img src={require("./roomOption.png")} alt="" />
+                <img src={require("../../images/roomOption.png")} alt="" />
             </div>
         );
     }

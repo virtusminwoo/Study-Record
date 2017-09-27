@@ -1,3 +1,6 @@
+//modal close로 인해 안써도 됨
+
+
 import React, { Component } from 'react';
 import LoginBox from './LoginBox';
 import FooterImg from './FooterImg';

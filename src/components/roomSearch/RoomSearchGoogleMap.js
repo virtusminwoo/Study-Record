@@ -1,33 +1,38 @@
 import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
+import {Map, InfoWindow, Marker, GoogleApiWrapper, Polygon} from 'google-maps-react';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+export class MapContainer extends Component {
 
-class RoomSearchGoogleMap extends Component {
-
-
-
-  static defaultProps = {
-    center: {lat: 37.535887, lng: 126.984063},
-    zoom: 11
-  };
-
-  render() {
-      var style={
+    render() {
+        var style={
             display: 'inline-block',
             position : 'relative', 
-            width: '1200px', 
-            height: '610px'
+            width: '1600px', 
+            height: '810px'
         }
-    return (
-        <div style={style}>
-            <GoogleMapReact defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
-                <AnyReactComponent lat={37.535887} lng={126.984063} text={'서울의 중심'} />
-            </GoogleMapReact>
-        </div>
-    );
-  }
-}
 
+        return (
+            <div style={style} >
+                <Map google={this.props.google} zoom={11}
+                    initialCenter={{
+                    lat: 37.497640,
+                    lng: 127.027139
+                }}>
+                    
+                    
+                    <Marker
+                        title={'detailedRoom'}
+                        name={'detailedRoom'}
+                        position={{lat: this.props.markLat, lng: this.props.markLng}} />
+                    
+                   
 
-export default RoomSearchGoogleMap;
+                </Map>
+            </div>
+        );
+    }
+    }
+
+    export default GoogleApiWrapper({
+    apiKey: ('AIzaSyAaqBqLxotrHuE5i8yhR_V5uC39SqcV0BY')
+    })(MapContainer)

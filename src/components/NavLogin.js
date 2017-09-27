@@ -1,46 +1,50 @@
 import React, { Component } from 'react';
 import Modal from './Modal';
-import App from './App';
+import LoginBox from './LoginBox';
 
-        class NavLogin extends Component {
-            constructor(){
-                super(...arguments);
-                this.state = {
-                    showModal : 2
-                }
-            }
 
-            LoginModal(){
-                this.setState({showModal: true})
-            }
 
-            close(){
-                this.setState({showModal: false})
-            }
 
-            render() {
-                let loginModal;
-                    if(this.state.showModal==true){
-                        loginModal = (
-                            <Modal onClick={this.close.bind(this)}>
-                                <button  onClick={this.hideModal}>Closeasdasdsadda</button>
-                                <h1>safdasfsafasdfsfasfasf</h1>
-                            </Modal>
-                        )
-                    } else if (this.state.showModal == false){
-                        loginModal = null
-                    }
-                return(
-                    <ul>
-                        <li onClick={this.LoginModal.bind(this)}>
-                            <a href = "#">
-                                {this.props.NavLoginData.title}
-                            </a>
-                        </li>
-                        {loginModal}
-                    </ul>
-                );
-            }
+
+
+ const NavLogin = ({showModal,OpenModal, CloseModal}) => {
+     let loginModal;
+        if(showModal==true){
+            loginModal = (
+                <div className="Modal">    
+                    <div className="AllBorder">    
+                        <span className="Close" onClick={CloseModal}>    
+                            &times; 
+                        </span>
+                        <LoginBox />
+                    </div>
+                </div>
+            )
+        } else if (showModal == false){
+            loginModal = null
         }
-        
+    return (
+            <ul>
+                <li>공인중개사 회원가입</li>
+                <li onClick={OpenModal}>
+                    <a href = "#">
+                        회원가입 및 로그인
+                    </a>
+                </li>
+                {loginModal}
+            </ul>
+
+    );
+};
+
+
+NavLogin.defaultProps = {
+    showModal: false
+};
+
+
+
+
+
+
         export default NavLogin;

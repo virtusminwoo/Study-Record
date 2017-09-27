@@ -16,7 +16,7 @@ import RoomSearchWrapper from './roomSearch/RoomSearchWrapper';
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="AppWrapper">
                 <HeaderGroup />
                 <MainPhotoBottomDiv />
                 <TemaSearchGroup />

@@ -1,9 +1,15 @@
-body { 
-            overflow-x: hidden; 
-            background: url(./images/mainPhotoTop.png);
-            background-repeat:no-repeat;
-            background-position: top 60px left 45%;
-            background-size: 2650px 570px;
+body {
+    overflow-x : none;
+}
+
+
+.AppWrapper { 
+        width : 100%;
+        height : 100%;
+        background: url(./images/mainPhotoTop.png);
+        background-repeat:no-repeat;
+        background-position: top 60px left 45%;
+        background-size: 2650px 570px;
             
         }
         
@@ -57,16 +63,25 @@ a{
     position : absolute;
     right : 350px;
     top : 20px;
-    width : 300px;
+    width : 340px;
 }
 
 .NavRoomDiv ul{
     display : inline-block;
-    padding-left: 40px;
+    padding-left: 70px;
     font-size : 14px;
     font-weight: 100;
 }
 
+.NavRoomDiv li{
+    display : inline;
+    padding-left : 30px;
+}
+
+.active{
+    font-weight: bold;
+    background-color : black;
+}
 
 .NavLoginDiv{
     display : inline-block;
@@ -83,6 +98,10 @@ a{
     font-weight: 100;
 }
 
+.NavLoginDiv li{
+    display : inline;
+    padding-left : 30px;
+}
 
 .MainPhotoBottomDiv{
     position : absolute;
@@ -465,7 +484,7 @@ a{
 .Modal {
 /*    display: none; */
     position: fixed; 
-    z-index: 1; 
+    z-index: 10; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -752,6 +771,7 @@ a{
     display: inline-block;
     position :fixed;
     right : 0px;
+    top : 100px;
     width : 460px;
     height : 100%;
     background-color: white;
@@ -810,24 +830,27 @@ a{
 }
 
 .RoomListTable td{
+    width : 420px;
+    padding : 2px;
     height : 120px;
     border : 1px solid #DFDFDF;
 }
 
-.RoomListTable td:hover{
+/*.RoomListTable td:hover{
     background-color : #D2E5FF;    
-}
-
+}*/
 .RoomListTable img{
+    z-index : -1;
     position : relative;
     left : 30px;
-    top : 20px;
+    top : 30px;
     width : 110px;
     height : 100px;
     margin : -20px;
 }
 
 .se{
+    z-index : -1;
     font-size :20px;
     display : inline-block;
     position : relative;
@@ -836,6 +859,7 @@ a{
 }
 
 .price{
+    z-index : -1;
     font-size : 20px;
     font-weight: 500;
     color : blue;
@@ -845,7 +869,19 @@ a{
     left : 70px;
 }
 
+.roomHashDescription{
+    z-index : -1;
+    position : relative;
+    top : -15px;
+    left : 60px;
+    font-size : 14px;
+    width : 280px;
+
+
+}
+
 .roomDescription{
+    z-index : -1;
     position : relative;
     top : -35px;
     left : 60px;
@@ -854,6 +890,7 @@ a{
 }
 
 .roomPrivateDesctiption{
+    z-index : -1;
     position : relative;
     top : -10px;
     left : 60px;
@@ -880,6 +917,7 @@ a{
 
 .PhotoSlideDiv{
     position : relative;
+    top : 20px;
     left : -9%;
     width : 82%;
 }
@@ -888,7 +926,10 @@ a{
     display: block;
 }
 
-
+.HeaderGroupHr{
+    position : relative;
+    top : 10px;
+}
 .RoomCenterDescriptionTableDiv{
     position : relative;
     left : -9%;
@@ -897,6 +938,7 @@ a{
 
 .RoomCenterDescriptionTableDiv table{
     position : relative;
+    top : 20px;
     width : 660px;
     border : 1px solid black;
     border-collapse: collapse;
@@ -939,9 +981,9 @@ a{
 
 .FixedRightDescriptionDiv{
     position : fixed;
-    top : 60px;
+    top : 75px;
     display : inline-block;
-    left : 60%;
+    left : 70%;
     width : 250px;
     padding : 40px 20px;
     border : 1px solid #D1D1D1;
@@ -1043,6 +1085,10 @@ a{
 }
 
 .RoomCenterDetailedDescription{
+    position : relative;
+    top : 100px;
+    left : -9%;
+    width : 82%;
     width : 660px;
 }
 
@@ -1053,7 +1099,6 @@ a{
 .RoomCenterGoogleMapDiv{
     position : relative;
     top : 150px;
-    left : -9%;
     width : 82%;
     
 }
@@ -1065,7 +1110,11 @@ a{
 }
 
 
-
+.RoomCenterGoogleMapBottom{
+    position : relative;
+    top : 650px;
+    left : 300px;
+}
 
 
 
@@ -1100,7 +1149,13 @@ a{
     @media screen and (max-width : 1024px){
             body{
                 overflow-x : scroll;
+            }
+
+            .AppWrapper{
+                background: url(./images/mainPhotoTop.png);
+                background-repeat:no-repeat;
                 background-position: top 60px left -750px;
+                background-size: 2650px 570px;
             }
             
             .MainPhotoBottomDiv{

@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
 import HeaderGroup from '../HeaderGroup';
-import PhotoSlideDiv from './PhotoSlideDiv';
-import RoomCenterDescriptionTableDiv from './RoomCenterDescriptionTableDiv'
 import RoomCenterOptionDiv from './RoomCenterOptionDiv'
-import RoomCenterDetailedDescriptionDiv from './RoomCenterDetailedDescriptionDiv'
 import RoomCenterGoogleMapDiv from './RoomCenterGoogleMapDiv'
-import FixedRightDescriptionDiv from './FixedRightDescriptionDiv'
 import FooterGroup from '../FooterGroup'
-
 import detailedRoomsAPI from '../../data/detailedRoomsAPI'
 
 
 //컴포넌트 props 전달되면 지울것
-import FixedRightDescriptionDivTopButtonDiv from './FixedRightDescriptionDivTopButtonDiv'
-import FixedRightDescriptionDivBottomDealerPhone from './FixedRightDescriptionDivBottomDealerPhone'
-import PhotoSlide from './PhotoSlide'
 import Swiper from 'react-id-swiper';
 import './slidePhoto.css'
-
+import './detailedRoom.css';
 
 
 
@@ -25,9 +17,19 @@ const DetailedRoomWrapper = (props) => {
   const room = detailedRoomsAPI.get(
     parseInt(props.match.params.id, 10)
   )
-  if (!room) {
-    return <div>Sorry, but the room was not found</div>
+
+  
+
+
+  function roomDesc(props){
+      const rooms = room.detailedDescription.map((room, index) => 
+                <p key={index}>{room}</p>
+            )
+            return (
+                <p>{rooms}</p>
+            )     
   }
+
 
     const params = {
         nextButton: '.swiper-button-next',
@@ -40,16 +42,18 @@ const DetailedRoomWrapper = (props) => {
 
 
         return (
-            console.log(room.roomPhoto[0]),
+            console.log(),
             <div className="DetailedRoomWrapper">
                 <HeaderGroup />
+                <hr className="HeaderGroupHr" />
                 <div className="PhotoSlideDiv">
                     <Swiper className=".swiper-container" {...params}>
-                        <div><img src={require("../../images/R2/R2_1.png")} alt="" /></div>
-                        <div>asdasd</div>
-                        <div><img src={room.roomPhoto[2]} alt="" /></div>
-                        <div>Slide 4</div>
-                        <div>Slide 5</div>
+                       <div><img src={require("../../images/R1/R1_1.png")} alt="" /></div>
+                       <div><img src={require("../../images/R1/R1_2.png")} alt="" /></div>
+                       <div><img src={require("../../images/R1/R1_3.png")} alt="" /></div>
+                       <div><img src={require("../../images/R1/R1_4.png")} alt="" /></div>
+                       <div><img src={require("../../images/R1/R1_5.png")} alt="" /></div>
+                       <div><img src={require("../../images/R1/R1_6.png")} alt="" /></div>
                     </Swiper>
                 </div>
                 <div className="RoomCenterDescriptionTableDiv">
@@ -70,23 +74,33 @@ const DetailedRoomWrapper = (props) => {
                     <hr />
                     <br />
                     <h3>상세설명</h3>
-                    {room.detailedDescription}
+                    {roomDesc()}
+                    
                     <br />
                     <hr />
                 </div>
-                <RoomCenterGoogleMapDiv />
+                <RoomCenterGoogleMapDiv markLat={room.markerLat} markLng={room.markerLng}/>
                 <div className="FixedRightDescriptionDiv">
                     <div className="FixedRightDescriptionDivTop">
                         <div className="FixedRightDescriptionDivTopRoom">
-                        <h3>{room.buildingType}</h3> <h3>{room.rentType}</h3><h3>{room.depositFee}만원</h3>
-                        <p>{room.shortDescription}</p>
-                        <p>{room.domicile}</p>
-                        <p>{room.hashDescription}</p>
-                        <br />
-                        <hr />
+                            <h3>{room.buildingType}</h3> <h3>{room.rentType}</h3><h3>{room.depositFee}만원</h3>
+                            <p>{room.shortDescription}</p>
+                            <p>{room.domicile}</p>
+                            <p>{room.hashDescription}</p>
+                            <br />
+                            <hr />
+                            <br />
                         </div>
                         <div className="FixedRightDescriptionDivTopRoom">
-                            <FixedRightDescriptionDivTopButtonDiv />
+                            <div className="FixedRightDescriptionDivTopRoom">
+                                <div className="FixedRightDescriptionButton">
+                                    <p> ♥ 찜 </p>
+                                </div>
+                                
+                                <div className="FixedRightDescriptionButton">
+                                    <p> 신고 </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="FixedRightDescriptionDivBottom">
@@ -99,12 +113,16 @@ const DetailedRoomWrapper = (props) => {
                                 <p>중개등록번호 {room.registrationNumber}</p>
                                 <p>중개사와의 거래 시 수수료가 발생하니 참고하세요</p>
                             </div>
-                            <FixedRightDescriptionDivBottomDealerPhone />
+                            <div className="FixedRightDescriptionDivBottomDealerPhone">
+                                <p> ☎ 연락처보기 </p>
+                            </div>
                         </div>
                     </div>
                     
                 </div>
-                <FooterGroup />
+                <div className="detailedRoomFooterDiv">
+                    <FooterGroup />
+                </div>
             </div>
         );
     }
