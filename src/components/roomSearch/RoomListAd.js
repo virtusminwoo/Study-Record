@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class RoomListAd extends Component {
-    render() {
-        return (
-            <div className="RoomListAd">
-                <p> 이 지역 추천 공인 중개업소 매물</p>
-                <a href="#">광고</a>
-            </div>
-        );
-    }
-}
+const RoomListAd = (props) => {
+            return(
+                <div className="RoomListAd">
+                    <p> {props.p}</p>
+                    <a href="#"> {props.ad}</a>
+                </div>  
+            )
+        }
+    
 
 export default RoomListAd;

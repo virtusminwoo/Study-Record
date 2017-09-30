@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Map, InfoWindow, Marker, GoogleApiWrapper, Polygon} from 'google-maps-react';
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 export class MapContainer extends Component {
 
@@ -7,11 +7,13 @@ export class MapContainer extends Component {
         var style={
             display: 'inline-block',
             position : 'relative', 
-            width: '1600px', 
-            height: '810px'
+            top : "3px",
+            width: '100%', 
+            height: '100%'
         }
 
         return (
+            <div className="MapContainerDiv">
             <div style={style} >
                 <Map google={this.props.google} zoom={11}
                     initialCenter={{
@@ -24,10 +26,8 @@ export class MapContainer extends Component {
                         title={'detailedRoom'}
                         name={'detailedRoom'}
                         position={{lat: this.props.markLat, lng: this.props.markLng}} />
-                    
-                   
-
                 </Map>
+            </div>
             </div>
         );
     }

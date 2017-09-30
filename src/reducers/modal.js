@@ -5,7 +5,6 @@ const initialState = {
     showModal : false
 };
 
-
 function modal(state = initialState, action) {
     switch (action.type) {
         case types.MODAL_OPEN: 
@@ -23,4 +22,5 @@ function modal(state = initialState, action) {
     }
 };
 
-export default modal;
+
+export default modal

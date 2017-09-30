@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import HeaderNavLeft from './HeaderNavLeft';
 import HeaderNavRight from './HeaderNavRight';
 
-class HeaderGroup extends Component {
-    render() {
+const HeaderGroup = () => {
         return (
             <div>
                 <HeaderNavLeft />
@@ -13,4 +12,4 @@ class HeaderGroup extends Component {
     }
 }
 
-export default HeaderGroup;
+export default HeaderGroup; 

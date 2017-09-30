@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class NavSiteUl5 extends Component{
-        render(){
+const NavSiteUl5 = (props) => {
             return(
                 <div>
                     <ul>   
-                        <li>{this.props.NavSiteUl5Data.title}</li>
+                        <li>{props.NavSiteUl5Data.title}</li>
                     </ul>
                 </div>
             )
         }
-    }
+    
 
 export default NavSiteUl5;

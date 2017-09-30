@@ -6,11 +6,11 @@ import './index.css';
 
 // Redux 관련 불러오기
 import { createStore } from 'redux'
-import reducers from './reducers';
+import pushActions from './reducers/index.js';
 import { Provider } from 'react-redux';
 
 // 스토어 생성
-const store = createStore(reducers);
+const store = createStore(pushActions);
 
 
 ReactDOM.render(

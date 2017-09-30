@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FixedRightDescriptionDivBottomDealerPhone extends Component {
-    render() {
+const FixedRightDescriptionDivBottomDealerPhone = () => {
         return (
             <div className="FixedRightDescriptionDivBottomDealerPhone">
                 <p> ☎ 연락처보기 </p>
-            </div>
+            </div> 
         );
     }
-}
+
 
 export default FixedRightDescriptionDivBottomDealerPhone;

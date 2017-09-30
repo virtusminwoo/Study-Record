@@ -1,16 +1,21 @@
-import React, { Component } from 'react';
-import NavRoomGroup from './NavRoomGroup';
-import NavLoginGroup from './NavLoginGroup';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ReduxNavLogin from '../containers/ReduxNavLogin'
 
-class HeaderNavRight extends Component {
-    render() {
+const HeaderNavRight = () => {
         return (
-            <div>
-                <NavRoomGroup />
-                <NavLoginGroup />
-            </div>
+            <div className="HeaderNavRight">
+                <div className="NavRoomDiv">
+                    <ul>
+                        <li><Link to='/roomsearch' className="NavLink" >방 검색</Link></li>
+                        <li><Link to='#' className="NavLink">관심목록</Link></li>
+                        <li><Link to='#' className="NavLink">방 등록</Link></li>
+                    </ul>
+                </div>
+                    <ReduxNavLogin />
+                </div>
         );
     }
-}
+
 
 export default HeaderNavRight;

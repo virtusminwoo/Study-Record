@@ -1,19 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import NavLogin from './NavLogin';
-import NavLoginContainer from '../containers/ContainerNavLogin'
+import ContainerNavLogin from '../containers/ContainerNavLogin'
 
-        class NavLoginGroup extends Component{
-        
-
-        render(){
-            return(
-                
-                    <div className="NavLoginDiv">
-                        <NavLoginContainer />
-                    </div>
-                
-            )
-        }
+const NavLoginGroup = () => {
+        return(
+            <div className="NavLoginDiv">
+                <ContainerNavLogin />
+            </div>
+        )
     }
+    
     
 export default NavLoginGroup;

@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import NavSiteUlGroup from './NavSiteUlGroup';
 
-class NavSiteGroup extends Component {
-    render(){
+const NavSiteGroup = () => {
         return(
-        <div className="NavSiteDiv">
-            <NavSiteUlGroup />
-        </div>
+            <div className="NavSiteDiv">
+                <NavSiteUlGroup />
+            </div>
         )
     }
-}
+
 
 export default NavSiteGroup;

@@ -1,14 +1,28 @@
-import React, { Component } from 'react';
-import PhotoSlide from './PhotoSlide';
+import React from 'react';
 
-class PhotoSlideDiv extends Component {
-    render() {
+import Swiper from 'react-id-swiper';
+import './slidePhoto.css'
+
+
+const PhotoSlideDiv = (props) => {
+
+    const params = {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: false,
+        spaceBetween: 0,
+        loop: true
+    };
+    
         return (
             <div className="PhotoSlideDiv">
-                <PhotoSlide />
+                <Swiper className=".swiper-container" {...params}>
+                    {props.room.roomPhoto}
+                </Swiper>
             </div>
         );
     }
-}
+
 
 export default PhotoSlideDiv;

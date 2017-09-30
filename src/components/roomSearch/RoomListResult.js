@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class RoomListResult extends Component {
-    render() {
-        return (
-            <div className="RoomListResult">
-                <p> 검색결과</p>
-            </div>
-        );
-    }
-}
+const RoomListResult = (props) => {
+            return(
+                <div className="RoomListResult">
+                    <p> {props.p}</p>
+                </div>
+            )
+        }
+    
 
 export default RoomListResult;

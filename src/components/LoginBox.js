@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import LoginBoxTop from './LoginBoxTop';
 import LoginBoxBottom from './LoginBoxBottom';
 
-class LoginBox extends Component {
-    
-    render() {
+
+const LoginBox = () => {
         return (
             <div className="LoginBox">         
                 <LoginBoxTop />
@@ -12,6 +11,6 @@ class LoginBox extends Component {
             </div>
         );
     }
-}
+
 
 export default LoginBox;

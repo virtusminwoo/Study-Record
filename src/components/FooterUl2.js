@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FooterUl2 extends Component{
-        render(){
+const FooterUl2 = () => {
             return(
                 <ul className="FooterUl2">
                     <li>사업자 번호 : 220-88-59156</li>
@@ -11,6 +10,6 @@ class FooterUl2 extends Component{
                 </ul> 
             )
         }
-    }
+    
 
 export default FooterUl2;

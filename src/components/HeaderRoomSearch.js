@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MainIcon from './MainIcon';
 
-
-class HeaderRoomSearch extends Component {
-    render() {
+const HeaderRoomSearch = () => {
         return (
             <div className="HeaderRoomSearch">   
                 <MainIcon /> 
             </div>
         );
     }
-}
 
 
 

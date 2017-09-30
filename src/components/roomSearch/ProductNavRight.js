@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import ProductNavRightUl from './ProductNavRightUl'
 
 class ProductNavRight extends Component {
     render() {
         return (
             <div className="ProductNavRight">
-                <ProductNavRightUl />
+                <ul className="ProductNavRightUl">
+                    <li>지도</li>
+                    <li>리스트</li>
+                </ul>
             </div>
         );
     }

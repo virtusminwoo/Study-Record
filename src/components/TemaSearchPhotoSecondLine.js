@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TemaSearchPhotoSecondLine extends Component{
-        render(){
+const TemaSearchPhotoSecondLine = (props) => {
             return(
                 <td>
                     <figure>
-                        <a href={this.props.TemaPhotoSecondLineData.link}>
-                            <img src={this.props.TemaPhotoSecondLineData.photo} alt="" />
+                        <a href={props.TemaPhotoSecondLineData.link}>
+                            <img src={props.TemaPhotoSecondLineData.photo} alt="" />
                                 <div className="TemaSentence">
-                                    <h3>{this.props.TemaPhotoSecondLineData.title}</h3>
+                                    <h3>{props.TemaPhotoSecondLineData.title}</h3>
                                     <hr />
-                                    <p>{this.props.TemaPhotoSecondLineData.description}</p>
+                                    <p>{props.TemaPhotoSecondLineData.description}</p>
                                 </div>
                         </a>
                     </figure>
                 </td>
             )
         }
-    }
+    
 
 export default TemaSearchPhotoSecondLine;

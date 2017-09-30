@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FooterUl1 extends Component{
-        render(){
+const FooterUl1 = () => {
             return(
                 <ul className="FooterUl1">
                     <li><span>스테이션3</span></li>
@@ -12,6 +11,6 @@ class FooterUl1 extends Component{
                     
             )
         }
-    }
+    
 
 export default FooterUl1;

@@ -1,26 +1,13 @@
-import * as types from '../actions/ActionTypes';
+import { combineReducers } from 'redux'
+
+import marker from './marker';
+import modal from './modal';
 
 
-const initialState = {
-    showModal : false
-};
+const pushActions = combineReducers({
+    modalData:modal,
+    markerData:marker
+})
 
 
-function modal(state = initialState, action) {
-    switch (action.type) {
-        case types.MODAL_OPEN: 
-            return {
-                ...state,
-                showModal : true
-            };
-        case types.MODAL_CLOSE:
-            return {
-                ...state,
-                showModal : false
-            };
-        default:
-            return state;
-    }
-};
-
-export default modal;
+export default pushActions;

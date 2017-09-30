@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FooterImg extends Component{
-        render(){
+
+const FooterImg = (props) => {
             return(
                 <div className="FooterImg">
-                    <img src={this.props.img} alt=""></img>
+                    <img src={props.img} alt=""></img>
                 </div>
                     
             )
         }
-    }
+
 
 export default FooterImg;

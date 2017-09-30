@@ -1,3 +1,5 @@
+import React from 'react';
+
 const RoomAPI = {
   rooms: [
     {
@@ -7,9 +9,9 @@ const RoomAPI = {
         "shortDescription" : "★신축오피스텔★",
         "domicile" : "서울특별시 강남구 역삼동",
         "hashDescription" : [
-            "#단기가능", 
-            "#주차" , 
-            "#반려동물"
+            <div className="HashDescriptionDiv">#단기가능</div>, 
+            <div className="HashDescriptionDiv">#주차</div> , 
+            <div className="HashDescriptionDiv">#반려동물</div>
         ],
         "depositFee" : "1000/100",
         "layers" : "10 층 19 층",
@@ -39,10 +41,12 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 강남구 봉은사로 18길 13, 1층(역삼동)",
         "registrationNumber" : "11680-2017-00231",
         "roomPhoto" : [
-            "R1_1",
-            "R1_2",
-            "R1_3",
-            "R1_4"
+            <div><img src={require("../images/R1/R1_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R1/R1_2.png")} alt="" /></div>,
+            <div><img src={require("../images/R1/R1_3.png")} alt="" /></div>,
+            <div><img src={require("../images/R1/R1_4.png")} alt="" /></div>,
+            <div><img src={require("../images/R1/R1_5.png")} alt="" /></div>,
+            <div><img src={require("../images/R1/R1_6.png")} alt="" /></div>
         ],
         "markerLat" : 37.501947,
         "markerLng" : 127.034821
@@ -55,8 +59,8 @@ const RoomAPI = {
         "shortDescription" : "강남역5분거리 깔끔한 여성분 추천 단기방",
         "domicile" : "서울특별시 서초구 서초동",
         "hashDescription" : [
-            "#단기가능", 
-            "#반려동물"
+            <div className="HashDescriptionDiv">#단기가능</div>, 
+            <div className="HashDescriptionDiv">#반려동물</div>
         ],
         "depositFee" : "85/85",
         "layers" : "2 층 4 층",
@@ -85,12 +89,11 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 강남구 논현로85길 52 비111호",
         "registrationNumber" : "11680-2017-00241",
         "roomPhoto" : [
-            "require('../../images/R2/R2_1.png')",
-            '../../images/R2/R2_1.png',
-            "R2_2",
-            "{require('../../images/R2/R2_3.png')}",
-            "R2_4",
-            "R2_5"
+            <div><img src={require("../images/R2/R2_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R2/R2_2.png")} alt="" /></div>,
+            <div><img src={require("../images/R2/R2_3.png")} alt="" /></div>,
+            <div><img src={require("../images/R2/R2_4.png")} alt="" /></div>,
+            <div><img src={require("../images/R2/R2_5.png")} alt="" /></div>
         ],
         "markerLat" : 37.488724,
         "markerLng" : 127.009603
@@ -103,7 +106,7 @@ const RoomAPI = {
         "shortDescription" : "★화곡역초역세권 ★신축 투룸 첫입주 전세",
         "domicile" : "서울특별시 강서구 화곡동",
         "hashDescription" : [
-            "#주차"
+            <div className="HashDescriptionDiv">#주차</div>
         ],
         "depositFee" : "1억7000",
         "layers" : "4 층 6 층",
@@ -130,11 +133,16 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 강남구 화곡동 1075-12 1층 (102호)",
         "registrationNumber" : "92400000-01-05209",
         "roomPhoto" : [
-            '../../images/R2/R2_1.png',
-            "R3_2",
-            "{require('../../images/R2/R2_3.png')}",
-            "R3_4",
-            "R3_5"
+            <div><img src={require("../images/R3/R3_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R3/R3_2.png")} alt="" /></div>,
+            <div><img src={require("../images/R3/R3_3.png")} alt="" /></div>,
+            <div><img src={require("../images/R3/R3_4.png")} alt="" /></div>,
+            <div><img src={require("../images/R3/R3_5.png")} alt="" /></div>,
+            <div><img src={require("../images/R3/R3_6.png")} alt="" /></div>,
+            <div><img src={require("../images/R3/R3_7.png")} alt="" /></div>,
+            <div><img src={require("../images/R3/R3_8.png")} alt="" /></div>,
+            <div><img src={require("../images/R3/R3_9.png")} alt="" /></div>,
+            <div><img src={require("../images/R3/R3_10.png")} alt="" /></div>
         ],
         "markerLat" : 37.543327,
         "markerLng" : 126.840686
@@ -147,7 +155,7 @@ const RoomAPI = {
         "shortDescription" : "★★석촌호수 도보 2분거리 깔끔한 분리형 원룸★★",
         "domicile" : "서울특별시 송파구 삼전동",
         "hashDescription" : [
-            "#주차"
+            <div className="HashDescriptionDiv">#주차</div>
         ],
         "depositFee" : "3000/45",
         "layers" : "4 층 5 층",
@@ -176,11 +184,14 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 송파구 잠실동 245-16",
         "registrationNumber" : "11710-2017-00097",
         "roomPhoto" : [
-            '../../images/R2/R2_1.png',
-            "R4_2",
-            "{require('../../images/R2/R2_3.png')}",
-            "R4_4",
-            "R4_5"
+            <div><img src={require("../images/R4/R4_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R4/R4_2.png")} alt="" /></div>,
+            <div><img src={require("../images/R4/R4_3.png")} alt="" /></div>,
+            <div><img src={require("../images/R4/R4_4.png")} alt="" /></div>,
+            <div><img src={require("../images/R4/R4_5.png")} alt="" /></div>,
+            <div><img src={require("../images/R4/R4_6.png")} alt="" /></div>,
+            <div><img src={require("../images/R4/R4_7.png")} alt="" /></div>,
+            <div><img src={require("../images/R4/R4_8.png")} alt="" /></div>
         ],
         "markerLat" : 37.502579,
         "markerLng" : 127.090326
@@ -193,7 +204,8 @@ const RoomAPI = {
         "shortDescription" : "★★레몬에서 가장 저렴한방 즉시입주",
         "domicile" : "서울특별시 서초구 서초동",
         "hashDescription" : [
-            "#주차"
+            <div className="HashDescriptionDiv">#주차</div>,
+            <div className="HashDescriptionDiv">#직거래</div>
         ],
         "depositFee" : "300/30",
         "layers" : "6 층 15 층",
@@ -222,11 +234,10 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 서초구 서초중앙로49 동양라디안 루키 102호",
         "registrationNumber" : "가-9250-2534",
         "roomPhoto" : [
-            '../../images/R2/R2_1.png',
-            "R5_2",
-            "{require('../../images/R2/R2_3.png')}",
-            "R5_4",
-            "R5_5"
+            <div><img src={require("../images/R5/R5_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R5/R5_2.png")} alt="" /></div>,
+            <div><img src={require("../images/R5/R5_3.png")} alt="" /></div>,
+            <div><img src={require("../images/R5/R5_4.png")} alt="" /></div>
         ],
         "markerLat" : 37.485772,
         "markerLng" : 127.015258
@@ -239,7 +250,7 @@ const RoomAPI = {
         "shortDescription" : "남부터미널역 인근, 귀한 전세, 10월초입주",
         "domicile" : "서울특별시 서초구 서초동",
         "hashDescription" : [
-            "#주차"
+            <div className="HashDescriptionDiv">#주차</div>
         ],
         "depositFee" : "9500",
         "layers" : "9 층 10 층",
@@ -266,11 +277,10 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 서초구 서초중앙로49 동양라디안 루키 102호",
         "registrationNumber" : "가-9250-2534",
         "roomPhoto" : [
-            '../../images/R2/R2_1.png',
-            "R6_2",
-            "{require('../../images/R2/R2_3.png')}",
-            "R6_4",
-            "R6_5"
+            <div><img src={require("../images/R6/R6_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R6/R6_2.png")} alt="" /></div>,
+            <div><img src={require("../images/R6/R6_3.png")} alt="" /></div>,
+            <div><img src={require("../images/R6/R6_4.png")} alt="" /></div>
         ],
         "markerLat" : 37.486597,
         "markerLng" : 127.013842
@@ -311,11 +321,13 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 중랑구 용마산로115길 127, 101동 지1층 에스108호",
         "registrationNumber" : "92290000-2592",
         "roomPhoto" : [
-            '../../images/R7/R7_1.png',
-            "R7_2",
-            "{require('../../images/R7/R7_3.png')}",
-            "R7_4",
-            "R7_5"
+            <div><img src={require("../images/R7/R7_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R7/R7_2.png")} alt="" /></div>,
+            <div><img src={require("../images/R7/R7_3.png")} alt="" /></div>,
+            <div><img src={require("../images/R7/R7_4.png")} alt="" /></div>,
+            <div><img src={require("../images/R7/R7_5.png")} alt="" /></div>,
+            <div><img src={require("../images/R7/R7_6.png")} alt="" /></div>,
+            <div><img src={require("../images/R7/R7_7.png")} alt="" /></div>
         ],
         "markerLat" : 37.600667,
         "markerLng" : 127.098561
@@ -354,11 +366,11 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 용산구 보광로24길 13. 1층(보광동)",
         "registrationNumber" : "11170-2015-00219",
         "roomPhoto" : [
-            '../../images/R8/R8_1.png',
-            "R8_2",
-            "{require('../../images/R8/R8_3.png')}",
-            "R8_4",
-            "R8_5"
+            <div><img src={require("../images/R8/R8_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R8/R8_2.png")} alt="" /></div>,
+            <div><img src={require("../images/R8/R8_3.png")} alt="" /></div>,
+            <div><img src={require("../images/R8/R8_4.png")} alt="" /></div>,
+            <div><img src={require("../images/R8/R8_5.png")} alt="" /></div>
         ],
         "markerLat" : 37.537926,
         "markerLng" : 126.996022
@@ -371,9 +383,9 @@ const RoomAPI = {
         "shortDescription" : "투룸 창문이 큰 방",
         "domicile" : "서울특별시 서초구 반포동",
         "hashDescription" : [
-            "#직거래",
-            "#단기가능",
-            "#주차"
+            <div className="HashDescriptionDiv">#직거래</div>,
+            <div className="HashDescriptionDiv">#단기가능</div>,
+            <div className="HashDescriptionDiv">#주차</div>
         ],
         "depositFee" : "2000/60",
         "layers" : "2 층 3 층",
@@ -397,11 +409,8 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 강남구 언주로 97길 34, 101호",
         "registrationNumber" : "9250-12207",
         "roomPhoto" : [
-            '../../images/R8/R8_1.png',
-            "R8_2",
-            "{require('../../images/R8/R8_3.png')}",
-            "R8_4",
-            "R8_5"
+            <div><img src={require("../images/R9/R9_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R9/R9_2.png")} alt="" /></div>
         ],
         "markerLat" : 37.504804,
         "markerLng" : 126.998931
@@ -414,7 +423,7 @@ const RoomAPI = {
         "shortDescription" : "탁트인 전망 방과주방 분리",
         "domicile" : "서울특별시 영등포구 여의도동",
         "hashDescription" : [
-            "#주차"
+            <div className="HashDescriptionDiv">#주차</div>
         ],
         "depositFee" : "1000/90",
         "layers" : "7 층 40 층",
@@ -443,11 +452,12 @@ const RoomAPI = {
         "dealerIncDomicile" : "서울특별시 영등포구 여의도동 61 여의도금호리첸시아A 203호",
         "registrationNumber" : "92440000-07800",
         "roomPhoto" : [
-            '../../images/R8/R8_1.png',
-            "R8_2",
-            "{require('../../images/R8/R8_3.png')}",
-            "R8_4",
-            "R8_5"
+            <div><img src={require("../images/R10/R10_1.png")} alt="" /></div>,
+            <div><img src={require("../images/R10/R10_2.png")} alt="" /></div>,
+            <div><img src={require("../images/R10/R10_3.png")} alt="" /></div>,
+            <div><img src={require("../images/R10/R10_4.png")} alt="" /></div>,
+            <div><img src={require("../images/R10/R10_5.png")} alt="" /></div>,
+            <div><img src={require("../images/R10/R10_6.png")} alt="" /></div>
         ],
         "markerLat" : 37.528102,
         "markerLng" : 126.920596

@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import AppIndex from '../components/AppIndex';
+import ContainerAppIndex from '../containers/ContainerAppIndex';
 
 class Root extends Component{
     render(){
         return(
             <BrowserRouter>
-                <AppIndex />
+                <ContainerAppIndex />
             </BrowserRouter>
                 )
             }

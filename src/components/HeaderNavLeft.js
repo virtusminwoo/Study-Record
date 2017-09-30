@@ -1,21 +1,30 @@
-import React, { Component } from 'react';
-import MainIcon from './MainIcon';
-import MainDabangPro from './MainDabangPro';
-import MainBar from './MainBar';
-import MainDabangPay from './MainDabangPay';
+import React from 'react';
 
-
-class HeaderNavLeft extends Component {
-    render() {
-        return (
-            <div>
-                <MainIcon img={require("../images/mainIcon.png")} />
-                <MainDabangPro img={require("../images/mainDabangPro.png")} />
-                <MainBar img={require("../images/mainBar.png")} />
-                <MainDabangPay img={require("../images/mainDabangPay.png")} />
+const HeaderNavLeft = () => {
+    return (
+             <div className="HeaderNavLeft">
+                <div className="MainIconDiv">
+                    <img src = {require("../images/mainIcon.png")} alt="" />
+                </div>
+                <div className="MainDabangProDiv">
+                    <img src = {require("../images/mainDabangPro.png")} alt="" />
+                </div>
+                <div className="MainBarDiv">
+                    <img src =  {require("../images/mainBar.png")} alt="" />
+                </div>
+                <div className="MainDabangPayDiv">
+                    <img src = {require("../images/mainDabangPay.png")} alt="" />
+                </div> 
             </div>
-        );
-    }
-}
+    );
+};
+
+
+
+
+HeaderNavLeft.defaultProps = {
+};
+
+
 
 export default HeaderNavLeft;

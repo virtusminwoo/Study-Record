@@ -6,29 +6,28 @@ export class RoomCenterGoogleMapDiv extends Component {
         var style={
             position : 'relative', 
             width: '1000px', 
-            height: '600px'
+            height: '800px'
         }
         return (
             <div className="RoomCenterGoogleMapDiv">
                 <div style={style} >
-                <h3>위치 및 주변 편의 시설</h3>
-                <Map google={this.props.google} zoom={17}
-                    initialCenter={{
-                    lat: this.props.markLat,
-                    lng: this.props.markLng
-                }}>
-                    
-                    
-                    <Marker
-                        title={'detailedRoom'}
-                        name={'detailedRoom'}
-                        position={{lat: this.props.markLat, lng: this.props.markLng}} />
-                    
-                   
+                    <h3>위치 및 주변 편의 시설</h3>
+                    <br />
+                    <Map google={this.props.google} zoom={17}
+                        initialCenter={{
+                        lat: this.props.markLat,
+                        lng: this.props.markLng
+                    }}>
+                        
+                        <Marker
+                            title={'detailedRoom'}
+                            name={'detailedRoom'}
+                            position={{lat: this.props.markLat, lng: this.props.markLng}} />
 
-                </Map>
-                <img className="RoomCenterGoogleMapBottom" src ={require("../../images/detailedRoomMap.png")} alt="" />
-            </div>
+                    </Map>
+                    
+                    <img className="RoomCenterGoogleMapBottom" src ={require("../../images/detailedRoomMap.png")} alt="" />
+                </div>
             </div>
         );
     }

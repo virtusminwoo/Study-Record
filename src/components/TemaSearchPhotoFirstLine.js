@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TemaSearchPhotoFirstLine extends Component{
-        render(){
+const TemaSearchPhotoFirstLine = (props) => {
             return(
                 <td>
                     <figure>
-                        <a href={this.props.TemaPhotoFirstLineData.link}>
-                            <img src={this.props.TemaPhotoFirstLineData.photo} alt="" />
+                        <a href={props.TemaPhotoFirstLineData.link}>
+                            <img src={props.TemaPhotoFirstLineData.photo} alt="" />
                                 <div className="TemaSentence">
-                                    <h3>{this.props.TemaPhotoFirstLineData.title}</h3>
+                                    <h3>{props.TemaPhotoFirstLineData.title}</h3>
                                     <hr />
-                                    <p>{this.props.TemaPhotoFirstLineData.description}</p>
+                                    <p>{props.TemaPhotoFirstLineData.description}</p>
                                 </div>
                         </a>
                     </figure>
                 </td>
             )
         }
-    }
+    
 
 export default TemaSearchPhotoFirstLine;

@@ -1,16 +1,14 @@
 //Redux사용으로 Container사용
 
-import React, { Component } from 'react';
+import React from 'react';
 import LoginForm from './LoginForm';
 
-class LoginBoxTop extends Component {
-    render() {
+const LoginBoxTop = () => {
         return (
             <div className="LoginBoxTop">   
                 <LoginForm />
             </div>
         );
     }
-}
 
 export default LoginBoxTop;

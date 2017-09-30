@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TableSiteDiv extends Component {
-    render() {
+const TableSiteDiv = () => {
         return (
             <div className="TableSiteDiv">
                 <hr className="TableSiteDivHr" />
@@ -19,6 +18,6 @@ class TableSiteDiv extends Component {
             </div>
         );
     }
-}
+
 
 export default TableSiteDiv;
