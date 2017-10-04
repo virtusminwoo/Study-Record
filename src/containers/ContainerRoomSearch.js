@@ -9,7 +9,6 @@ import RoomListAd from '../components/roomSearch/RoomListAd'
 import RoomListTable from '../components/roomSearch/RoomListTable'
 
 import ReduxProductNavLeftTable from './ReduxProductNavLeftTable'
-import MapWithAMarkerClusterer from '../components/roomSearch/MapWithAMarkerClusterer'
 
 
 const RoomSearchWrapper = ({stateMarkerLat, stateMarkerLng, MouseOver0, MouseOver1, MouseOver2, MouseOver3, MouseOver4, MouseOver5, MouseOver6, MouseOver7, MouseOver8, MouseOver9, MouseOut}) => {
