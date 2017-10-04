@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import detailedRoomsAPI from '../data/detailedRoomsAPI'
 
 import ContainerHeader from './ContainerHeader';
@@ -11,10 +11,44 @@ import ContainerFixedRightDescriptionDiv from './ContainerFixedRightDescriptionD
 import ContainerFooter from './ContainerFooter'
 
 
-const DetailedRoomWrapper = (props) => {
+
+import FixedRightDescriptionDivTop from '../components/detailedRoom/FixedRightDescriptionDivTop'
+import FixedRightDescriptionDivBottom from '../components/detailedRoom/FixedRightDescriptionDivBottom'
+
+class DetailedRoomWrapper extends Component {
+    constructor(props) {
+    super(props);
+    this.state={
+            scrollHeight : '',
+            absoluteDiv : false
+        }
+    }
+
+   
+
+    absoluteBoolean(){
+        var windowScrollY = window.scrollY;
+        var nowScrollHeight = this.refs.contents.scrollHeight;
+        if(windowScrollY >= nowScrollHeight - 2100){
+            console.log( windowScrollY)
+            this.setState({
+                scrollHeight : windowScrollY,
+                absoluteDiv : true
+            })
+        } else if(windowScrollY <= nowScrollHeight - 2100){
+            console.log( windowScrollY)
+            this.setState({
+                scrollHeight : windowScrollY,
+                absoluteDiv : false
+            })
+        }
+    }
+
+
+    render() {
 
     const room = detailedRoomsAPI.get(
-        parseInt(props.match.params.id, 10)
+        parseInt(this.props.match.params.id, 10)
     )
 
     const roomDesc = function(props){
@@ -25,23 +59,30 @@ const DetailedRoomWrapper = (props) => {
                 <p>{rooms}</p>
             )     
     }
-   
-    return (
-        console.log(room.roomPhoto),
-        <div className="DetailedRoomWrapper">
-            <ContainerHeader />
-            <hr className="HeaderGroupHr" />
-            <PhotoSlideDiv room={room} />
-            <RoomCenterDescriptionTableDiv room={room}/>
-            <RoomCenterOptionDiv />
-            <RoomCenterDetailedDescription roomDesc={roomDesc()}/>
-            <RoomCenterGoogleMapDiv markLat={room.markerLat} markLng={room.markerLng}/>
-            <ContainerFixedRightDescriptionDiv room={room} />
-            <ContainerFooter />
-        </div>
-    );
-    }
 
+
+    const isabsoluteDiv = this.state.absoluteDiv
+
+        return (
+            <div ref='contents' className="DetailedRoomWrapper" onWheel={this.absoluteBoolean.bind(this)}>
+                <ContainerHeader />
+                <hr className="HeaderGroupHr" />
+                <PhotoSlideDiv room={room} />
+                <RoomCenterDescriptionTableDiv room={room}/>
+                <RoomCenterOptionDiv />
+                <RoomCenterDetailedDescription roomDesc={roomDesc()}/>
+                <RoomCenterGoogleMapDiv markLat={room.markerLat} markLng={room.markerLng}/>
+                <div className={isabsoluteDiv? "FixedRightDescriptionDivAbsolute" : "FixedRightDescriptionWrapper"}>
+                    <div className={"FixedRightDescriptionDiv"}>
+                        <FixedRightDescriptionDivTop room={room} />
+                        <FixedRightDescriptionDivBottom room={room} />
+                    </div>
+                </div>
+                <ContainerFooter />
+            </div>
+        );
+        }
+    }
 
 
 export default DetailedRoomWrapper;

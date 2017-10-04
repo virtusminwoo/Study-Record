@@ -5,9 +5,6 @@ export const MODAL_CLOSE = 'MODAL_CLOSE';
 
 // validation
 export const HANDLE_SUBMIT = 'HANDLE_SUBMIT';
-export const EMAIL_LENGTH_0 = 'EMAIL_LENGTH_0'
-export const PASSWORD_LENGTH_0 = ' PASSWORD_LENGTH_0'
-
 export const HANDLE_CHANGE_EMAILID = 'HANDLE_CHANGE_EMAILID';
 export const HANDLE_CHANGE_PASSWORD = 'HANDLE_CHANGE_PASSWORD';
 
@@ -25,3 +22,14 @@ export const MOUSE_OVER7 = 'MOUSE_OVER7';
 export const MOUSE_OVER8 = 'MOUSE_OVER8';
 export const MOUSE_OVER9 = 'MOUSE_OVER9';
 export const MOUSE_OUT = 'MOUSE_OUT';
+
+
+//showDown
+export const CLICK_PRODUCT = 'CLICK_PRODUCT';
+export const CLICK_DEAL = 'CLICK_DEAL';
+export const CLICK_ROOM = 'CLICK_ROOM';
+export const CLICK_DEPOSIT = 'CLICK_DEPOSIT';
+export const CLICK_FEE = 'CLICK_FEE';
+export const CLICK_OPTION = 'CLICK_OPTION';
+export const CLICK_SET = 'CLICK_SET'
+

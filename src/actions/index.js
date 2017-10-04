@@ -14,25 +14,21 @@ export const CloseModal = () => ({
 
 // validation
 
-export const HandleSubmit = () => ({
-    type: types.HANDLE_SUBMIT
+export const HandleSubmit = (e) => ({
+    type: types.HANDLE_SUBMIT,
+    e
 })
 
-export const HandleChangeEmailId = () => ({
-    type: types.HANDLE_CHANGE_EMAILID
+export const HandleChangeEmailId = (e) => ({
+    type: types.HANDLE_CHANGE_EMAILID,
+    e
 })
 
-export const HandleChangePassword = () => ({
-    type: types.HANDLE_CHANGE_PASSWORD
+export const HandleChangePassword = (e) => ({
+    type: types.HANDLE_CHANGE_PASSWORD,
+    e
 })
 
-export const EmailLength0 = () => ({
-    type: types.EMAIL_LENGTH_0
-})
-
-export const PasswordLength0 = () => ({
-    type: types.PASSWORD_LENGTH_0
-})
 
 
 
@@ -77,6 +73,37 @@ export const MouseOver8 = () => ({
 export const MouseOver9 = () => ({
     type: types.MOUSE_OVER9
 })
+
 export const MouseOut = () => ({
     type: types.MOUSE_OUT
+})
+
+
+//showDown
+export const ClickProduct = () => ({
+    type: types.CLICK_PRODUCT
+})
+
+export const ClickDeal = () => ({
+    type: types.CLICK_DEAL
+})
+
+export const ClickRoom = () => ({
+    type: types.CLICK_ROOM
+})
+
+export const ClickDeposit = () => ({
+    type: types.CLICK_DEPOSIT
+})
+
+export const ClickFee = () => ({
+    type: types.CLICK_FEE
+})
+
+export const ClickOption = () => ({
+    type: types.CLICK_OPTION
+})
+
+export const ClickSet = () => ({
+    type: types.CLICK_SET
 })

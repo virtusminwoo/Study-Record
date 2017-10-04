@@ -8,6 +8,10 @@ import RoomListResult from '../components/roomSearch/RoomListResult'
 import RoomListAd from '../components/roomSearch/RoomListAd'
 import RoomListTable from '../components/roomSearch/RoomListTable'
 
+import ReduxProductNavLeftTable from './ReduxProductNavLeftTable'
+import MapWithAMarkerClusterer from '../components/roomSearch/MapWithAMarkerClusterer'
+
+
 const RoomSearchWrapper = ({stateMarkerLat, stateMarkerLng, MouseOver0, MouseOver1, MouseOver2, MouseOver3, MouseOver4, MouseOver5, MouseOver6, MouseOver7, MouseOver8, MouseOver9, MouseOut}) => {
     return (
         <div className="RoomSearchWrapper">
@@ -15,12 +19,11 @@ const RoomSearchWrapper = ({stateMarkerLat, stateMarkerLng, MouseOver0, MouseOve
             <ContainerHeader />
 
             <div className="ProductNav">
-                <ProductNavLeftTable />
+                <ReduxProductNavLeftTable />
                 <ProductNavRight />
             </div>
 
-            <RoomSearchGoogleMap markLat={stateMarkerLat} markLng={stateMarkerLng}/>
-
+            <RoomSearchGoogleMap markLat={stateMarkerLat} markLng={stateMarkerLng} />
             <div className="RoomListDiv">
                 <RoomListResult p={"검색결과 10개"}/>
                 <div className="RoomListOverFlow">

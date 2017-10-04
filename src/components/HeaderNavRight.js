@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ReduxNavLogin from '../containers/ReduxNavLogin'
 
 const HeaderNavRight = () => {
@@ -7,9 +7,9 @@ const HeaderNavRight = () => {
             <div className="HeaderNavRight">
                 <div className="NavRoomDiv">
                     <ul>
-                        <li><Link to='/roomsearch' className="NavLink" >방 검색</Link></li>
-                        <li><Link to='#' className="NavLink">관심목록</Link></li>
-                        <li><Link to='#' className="NavLink">방 등록</Link></li>
+                        <li><NavLink to='/roomsearch' className="NavLink" activeClassName="active">방 검색</NavLink></li>
+                        <li><NavLink to='#' className="NavLink" activeClassName="active">관심목록</NavLink></li>
+                        <li><NavLink to='#' className="NavLink" activeClassName="active">방 등록</NavLink></li>
                     </ul>
                 </div>
                     <ReduxNavLogin />

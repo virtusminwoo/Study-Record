@@ -73,7 +73,7 @@ img{
     position : absolute;
     right : 330px;
     top : 20px;
-    width : 340px;
+    width : 350px;
 }
 
 .NavRoomDiv ul{
@@ -86,6 +86,18 @@ img{
 .NavRoomDiv li{
     display : inline;
     padding-left : 30px;
+}
+
+
+.NavRoomDiv .active{
+    font-weight: bold;
+    display : inline-block;
+    height: 35px;
+    border-bottom : 4px solid #2579CD;
+}
+
+.NavLink:hover{
+    color : #B9EBFF;
 }
 
 .NavLoginDiv{
@@ -108,14 +120,6 @@ img{
     padding-left : 30px;
 }
 
-.active{
-    font-weight: bold;
-    background-color : black;
-}
-
-.NavLink:hover{
-    color : #B9EBFF;
-}
 
 .MainPhotoDiv{
     position : relative;
@@ -161,7 +165,7 @@ img{
 }
 
 
-.TemaSearchGroup{
+.ThemaSearchGroup{
     position : relative;
     padding-top : 50px;
     width : 1100px;
@@ -169,21 +173,21 @@ img{
     text-align: center;
 }
 
-.TemaSearchSentence{
+.ThemaSearchSentence{
     position : relative;
     width : 100%;
     text-align: center;
 }
 
-.TemaSearchSentence h1{
+.ThemaSearchSentence h1{
     font-size : 38px;
 }
 
-.TemaSearchSentence p{
+.ThemaSearchSentence p{
     font-size : 20px;
 }
 
-.TemaSentence{
+.ThemaSentence{
     position : relative;
     top : -200px;
     text-align: center;
@@ -191,33 +195,33 @@ img{
     width : 200px;
 }
 
-.TemaSentence h3{
+.ThemaSentence h3{
     font-size : 22px;
     margin-bottom: 20px;
 }
-.TemaSentence hr { 
+.ThemaSentence hr { 
     position : relative;
     width : 50px;
     margin-bottom: 20px;
 }
 
-.TemaSentence p{
+.ThemaSentence p{
     font-size : 13px;
 }
 
-.TemaSearchPhotoGroup{
+.ThemaSearchPhotoGroup{
     position:relative;
     width : 1100px;
     top : 50px;
 }
 
-.TemaSearchPhotoGroup figure {
+.ThemaSearchPhotoGroup figure {
     height : 300px;
     background: #fff;
     overflow: hidden;
 }
 
-.TemaSearchTable img { 
+.ThemaSearchTable img { 
     width : 300px;
     height: 300px;
     -webkit-transform: scale(1);
@@ -226,13 +230,13 @@ img{
     transition: .3s ease-in-out;
 }
 
-.TemaSearchTable figure:hover img {
+.ThemaSearchTable figure:hover img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     opacity: 0.5;
 }
 
-.TemaSearchTable td{
+.ThemaSearchTable td{
     padding : 10px;
     margin : 20px;
 }
@@ -493,12 +497,13 @@ img{
     height: 100%; 
     overflow: auto; 
     background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0,0,0,0.8); 
     padding-top: 60px;
 }
 
  .AllBorder{
     position : relative;
+    top : 130px;
     margin : auto;
     width : 350px;
     height : 450px;
@@ -532,6 +537,20 @@ img{
 .LoginForm{
     padding: 15px;
 }
+
+.WarningMessageH2{
+    position : fixed;
+    top : 10px;
+    background-color : red;
+    color : white;
+    width : 350px;
+    height : 45px;
+    line-height: 40px;
+    border-radius: 5px;
+    text-indent: 10px;
+    font-size : 15px;
+}
+
 
 .LoginBoxLogin{
     margin-bottom: 5px;
@@ -593,15 +612,14 @@ img{
 }
 
 .LoginOption{
-    display: block;
     text-align: center;
+    width : 280px;
 }
 
 .LoginOption li{
     display : inline-block;
-    text-align: center;
     font-size : 13px;
-    padding : 0px 5px;
+    padding : 0px 3px;
 }
 
 .LoginOption a{
@@ -641,6 +659,7 @@ img{
         text-align: center;
         font-size:13px;
         margin : -10px;
+        margin-top : 0px;
     }
 
 
@@ -769,6 +788,13 @@ img{
     color : #3B8DE0;
 }
 
+.RoomSearchNavLeftDivDivOpen:after{
+    content : " ▲";
+    position :relative;
+    left : 5px;
+    color : #3B8DE0;
+}
+
 .RoomSearchNavLeftDivDivDeposit:before{
     content: url(./images/RoomSearchNavLeftDivDivDeposit.png);
 }
@@ -785,12 +811,58 @@ img{
     font-size : 13px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
 }
+
 .CommonShow input[type="number"]{
     width : 80px;
     height : 20px;
     margin : 10px 5px;
     text-indent : 5px;
 }
+
+.CommonShow input[type="checkbox"]{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.CommonShow input[type="checkbox"] + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.CommonShow input[type="checkbox"] + label:before {
+    content: ' ';
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    line-height: 11px;
+    margin: -2px 3px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    background: #D1D1D1;
+    border: 1px solid #D1D1D1;
+    border-radius: 3px;
+}
+
+.CommonShow input[type="checkbox"]:checked + label:before {
+    content: '\2714';
+    font-size : 10px;
+    color: white;
+    background: #3B8DE0;
+    border-color: #3B8DE0;
+}
+
+
+
+
+
+
 
 .CommonShow li, .CommonShow h4{
     padding :5px 0px;
@@ -820,7 +892,7 @@ img{
 }
 
 .ShowDeposit{
-    width : 230px;
+    width : 240px;
     padding: 12px 0px;
     left : 340px;
 }
@@ -837,23 +909,19 @@ img{
 
 .ShowDepositDivLeft{
     display : inline-block;
-    width : 110px;
+    width : 120px;
     text-align: left;
-    padding-right : 10px;
+    text-indent : 30px;
 }
 
 
-.ShowDepositDivLeft ul li:hover{
-    background-color : #E5F1FE;
-}
-
-.ShowDepositDivRight ul li:hover{
+.ShowDeposit li:hover{
     background-color : #E5F1FE;
 }
 
 .ShowDepositDivRight{
     display : inline-block;
-    width : 110px;
+    width : 120px;
     text-align: right;
 }
 
@@ -862,17 +930,27 @@ img{
     width : 240px;
     padding: 12px 0px;
     left : 505px;
+    font-size : 14px;
+}
+
+.ShowFee input[type="number"]{
+    width : 80px;
+}
+
+.ShowFee li:hover{
+    background-color : #E5F1FE;
 }
 
 .ShowFeeDivLeft{
     display : inline-block;
-    width : 110px;
+    width : 120px;
     text-align: left;
+    text-indent : 30px;
 }
 
 .ShowFeeDivRight{
     display : inline-block;
-    width : 110px;
+    width : 120px;
     text-align: right;
 }
 
@@ -1120,17 +1198,24 @@ img{
 
 
 .FixedRightDescriptionWrapper{
-    position : absolute;
-    width: 250px;
-    height : 1600px;
-    top : 80px;
-    left : 1200px;
+    position : fixed;
+    top : 75px;
+    left : 70%;
+    width : 250px;
+    padding : 20px 20px;
+    border : 1px solid #D1D1D1;
+    z-index : 3;
+    background-color : white;
 }
 
 
 .FixedRightDescriptionDiv{
-    position : sticky;
-    top : 75px;
+    
+}
+
+.FixedRightDescriptionDivAbsolute{
+    position : absolute;
+    bottom : -300px;
     left : 70%;
     width : 250px;
     padding : 20px 20px;
@@ -1189,6 +1274,16 @@ img{
 .FixedRightDescriptionButton:hover{
     background-color: #ECF0F5;
 }
+
+.FixedRightDescriptionButtonHeartIcon:before{
+    content: '\2764';
+}
+
+.FixedRightDescriptionButtonSirenIcon:before{
+    content: '\26a0';
+}
+
+
 .FixedRightDescriptionDivBottom{
     position : relative;
     top : 20px;
@@ -1233,6 +1328,10 @@ img{
 .FixedRightDescriptionDivBottomDealer .confirmP{
     font-size : 10px;
     padding : 5px 0px;
+}
+
+.confirmP:before{
+    content : '\26a0'
 }
 
 .FixedRightDescriptionDivBottomDealerPhone{

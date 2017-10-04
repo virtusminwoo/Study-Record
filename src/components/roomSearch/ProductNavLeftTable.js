@@ -6,154 +6,84 @@ import ShowDeposit from './ShowDeposit'
 import ShowFee from './ShowFee'
 import ShowOption from './ShowOption'
 
-class ProductNavLeftTable  extends Component {
-    constructor(){
-        super();
-        this.state={
-            showProduct : false,
-            showDeal : false,
-            showRoom : false,
-            showDeposit : false,
-            showFee : false,
-            showOption : false
-        }
-    }
 
-    clickProduct(){
-        this.setState({
-            showProduct: true,
-            showDeal : false,
-            showRoom : false,
-            showDeposit : false,
-            showFee : false,
-            showOption : false
-        })
-    }
 
-    clickDeal(){
-        this.setState({
-            showProduct: false,
-            showDeal : true,
-            showRoom : false,
-            showDeposit : false,
-            showFee : false,
-            showOption : false
-        })
-    }
-
-    clickRoom(){
-        this.setState({
-            showProduct: false,
-            showDeal : false,
-            showRoom : true,
-            showDeposit : false,
-            showFee : false,
-            showOption : false
-        })
-    }
-
-    clickDeposit(){
-        this.setState({
-            showProduct: false,
-            showDeal : false,
-            showRoom : false,
-            showDeposit : true,
-            showFee : false,
-            showOption : false
-        })
-    }
-
-    clickFee(){
-        this.setState({
-            showProduct: false,
-            showDeal : false,
-            showRoom : false,
-            showDeposit : false,
-            showFee : true,
-            showOption : false
-        })
-    }
-
-    clickOption(){
-        this.setState({
-            showProduct: false,
-            showDeal : false,
-            showRoom : false,
-            showDeposit : false,
-            showFee : false,
-            showOption : true
-        })
-    }
-
-    render() {
+const ProductNavLeftTable = ({showProduct,showDeal,showRoom,showDeposit,showFee,showOption,showSet,ClickProduct,ClickDeal,ClickRoom,ClickDeposit,ClickFee,ClickOption,ClickSet}) => {
         let showDown;
-        if(this.state.showProduct){
+        if(showProduct){
             showDown=(
                 <div>
                     <ShowProduct />
                 </div>
             )
-        } else if(this.state.showDeal){
+        } else if(showDeal){
             showDown=(
                 <div>
                     <ShowDeal />
                 </div>
             )
-        } else if(this.state.showRoom){
+        } else if(showRoom){
             showDown=(
                 <div>
                     <ShowRoom />
                 </div>
             )
-        } else if(this.state.showDeposit){
+        } else if(showDeposit){
             showDown=(
                 <div>
                     <ShowDeposit />
                 </div>
             )
-        } else if(this.state.showFee){
+        } else if(showFee){
             showDown=(
                 <div>
                     <ShowFee />
                 </div>
             )
-        } else if(this.state.showOption){
+        } else if(showOption){
             showDown=(
                 <div>
                     <ShowOption />
                 </div>
             )
         }
+
+        const isShowDownProduct = showProduct
+        const isShowDownDeal = showDeal
+        const isShowDownRoom = showRoom
+        const isShowDownDeposit = showDeposit
+        const isShowDownFee = showFee
+        const isShowDownOption = showOption
         return (
             <div>
             <div className="RoomSearchNavLeft">
                 <div className="RoomSearchNavLeftDiv">
-                    <div className="RoomSearchNavLeftDivDiv" onClick={this.clickProduct.bind(this)}>
+                    <div className={isShowDownProduct? "RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivOpen" : "RoomSearchNavLeftDivDiv"} onClick={isShowDownProduct ? ClickSet : ClickProduct}>
                         매물종류
                     </div>
                 </div>
                 <div className="RoomSearchNavLeftDiv">
-                    <div className="RoomSearchNavLeftDivDiv" onClick={this.clickDeal.bind(this)}>
+                    <div className={isShowDownDeal? "RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivOpen" : "RoomSearchNavLeftDivDiv"} onClick={isShowDownDeal ? ClickSet : ClickDeal}>
                         거래종류
                     </div>
                 </div>
                 <div className="RoomSearchNavLeftDiv">
-                    <div className="RoomSearchNavLeftDivDiv" onClick={this.clickRoom.bind(this)}>
+                    <div className={isShowDownRoom? "RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivOpen" : "RoomSearchNavLeftDivDiv"} onClick={isShowDownRoom ? ClickSet : ClickRoom}>
                         방 종류
                     </div>
                 </div>
                 <div className="RoomSearchNavLeftDiv">
-                    <div className="RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivDeposit" onClick={this.clickDeposit.bind(this)}>
+                    <div className={isShowDownDeposit? "RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivDeposit RoomSearchNavLeftDivDivOpen" : "RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivDeposit"} onClick={isShowDownDeposit ? ClickSet : ClickDeposit}>
                         0 만원 ~ 무제한
                     </div>
                 </div>
                 <div className="RoomSearchNavLeftDiv">
-                    <div className="RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivFee" onClick={this.clickFee.bind(this)}>
+                    <div className={isShowDownFee? "RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivFee RoomSearchNavLeftDivDivOpen" : "RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivFee"} onClick={isShowDownFee ? ClickSet : ClickFee}>
                         0 만원 ~ 무제한
                     </div>
                 </div>
                 <div className="RoomSearchNavLeftDiv">
-                    <div className="RoomSearchNavLeftDivDiv" onClick={this.clickOption.bind(this)}>
+                    <div className={isShowDownOption? "RoomSearchNavLeftDivDiv RoomSearchNavLeftDivDivOpen" : "RoomSearchNavLeftDivDiv"} onClick={isShowDownOption ? ClickSet : ClickOption}>
                         추가옵션
                     </div>
                 </div>
@@ -162,6 +92,6 @@ class ProductNavLeftTable  extends Component {
             </div>
         );
     }
-}
+
 
 export default ProductNavLeftTable;

@@ -8,6 +8,7 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.3",
     "react-dom": "^15.6.1",
+    "react-google-maps": "^8.3.2",
     "react-icon": "^1.0.0",
     "react-id-swiper": "^1.4.0",
     "react-redux": "^5.0.6",

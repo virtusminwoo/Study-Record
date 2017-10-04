@@ -2,11 +2,12 @@
 
 import React from 'react';
 import LoginForm from './LoginForm';
+import ReduxLoginForm from '../containers/ReduxLoginForm'
 
 const LoginBoxTop = () => {
         return (
             <div className="LoginBoxTop">   
-                <LoginForm />
+                <ReduxLoginForm />
             </div>
         );
     }

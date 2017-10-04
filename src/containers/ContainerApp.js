@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ContainerHeader from './ContainerHeader';
 import MainPhotoBottomDiv from '../components/MainPhotoBottomDiv';
-import TemaSearchGroup from '../components/TemaSearchGroup';
+import ThemaSearchGroup from '../components/ThemaSearchGroup';
 import CareDiv from '../components/CareDiv';
 import NavSiteGroup from '../components/NavSiteGroup';
 import TableSiteDiv from '../components/TableSiteDiv';
@@ -13,7 +13,7 @@ class ContainerApp extends Component {
             <div className="ContainerApp">
                 <ContainerHeader />
                 <MainPhotoBottomDiv />
-                <TemaSearchGroup />
+                <ThemaSearchGroup />
                 <CareDiv />
                 <NavSiteGroup />
                 <TableSiteDiv />

@@ -4,11 +4,11 @@ const FixedRightDescriptionDivTopRoom = () => {
         return (
                 <div className="FixedRightDescriptionDivTopRoomButton">
                         <div className="FixedRightDescriptionButton">
-                            <p> ♥ 찜 </p>
+                            <p className="FixedRightDescriptionButtonHeartIcon"> 찜 </p>
                         </div>
                         
                         <div className="FixedRightDescriptionButton">
-                            <p> 신고 </p>
+                            <p className="FixedRightDescriptionButtonSirenIcon"> 신고 </p>
                     </div>
                 </div>
         );

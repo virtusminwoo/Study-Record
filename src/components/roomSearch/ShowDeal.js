@@ -6,9 +6,9 @@ class ShowDeal extends Component {
             <div className="CommonShow ShowDeal">         
                 <h4> 거래종류 </h4>  
                 <ul>
-                    <li> <input type="checkbox" defaultChecked/> 전체</li>
-                    <li> <input type="checkbox" /> 중개</li>
-                    <li> <input type="checkbox" /> 직거래</li>
+                    <li> <input type="checkbox" defaultChecked id="deal1"/><label htmlFor="deal1"> 전체</label></li>
+                    <li> <input type="checkbox" id="deal2"/><label htmlFor="deal2"> 중개</label></li>
+                    <li> <input type="checkbox" id="deal3"/><label htmlFor="deal3"> 직거래</label></li>
                 </ul>
             </div>
         );
