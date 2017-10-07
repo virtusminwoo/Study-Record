@@ -3,6 +3,7 @@ import ThemaSearchPhotoGroup from './ThemaSearchPhotoGroup';
 
 
 const ThemaSearchGroup = () => {
+
         return (
             <div className="ThemaSearchGroup">
                 <div className="ThemaSearchSentence">
@@ -11,7 +12,7 @@ const ThemaSearchGroup = () => {
                 </div>
                 <ThemaSearchPhotoGroup />
             </div>
-        );
+        )
     }
 
 export default ThemaSearchGroup;

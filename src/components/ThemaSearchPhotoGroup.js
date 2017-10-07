@@ -1,28 +1,27 @@
-import React from 'react';
-import themaSearchAPI from '../data/themaSearchAPI';
-import ThemaSearchPhotoFirstLine from './ThemaSearchPhotoFirstLine';
-import ThemaSearchPhotoSecondLine from './ThemaSearchPhotoSecondLine';
+import React,{Component} from 'react';
+import { connect } from 'react-redux';
+import ThemaSearchTable from './ThemaSearchTable';
 
-const ThemaSearchPhotoGroup = () => {
-            return(
-                <div className="ThemaSearchPhotoGroup">
-                    <table className="ThemaSearchTable">
-                        <tbody>
-                            <tr>
-                            {themaSearchAPI.ThemaPhotoFirstLineData.map((navData, i) => <ThemaSearchPhotoFirstLine key = {i} ThemaPhotoFirstLineData = {navData} />)} 
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table className="ThemaSearchTable">
-                        <tbody>
-                            <tr>
-                            {themaSearchAPI.ThemaPhotoSecondLineData.map((navData, i) => <ThemaSearchPhotoSecondLine key = {i} ThemaPhotoSecondLineData = {navData} />)} 
-                            </tr>
-                        </tbody>    
-                    </table>
-                </div> 
-            )
-        }
-    
+class ThemaSearchPhotoGroup extends Component {
+
+    render() {
+        return(
+            <div className="ThemaSearchPhotoGroup">
+                <ThemaSearchTable photoLine={this.props.photoFirstLine}/>
+                <ThemaSearchTable photoLine={this.props.photoSecondLine}/>
+            </div> 
+        )
+    }
+}
+
+let mapStateToProps = (state) => {
+    return {
+        photoFirstLine: state.photoLineData.photoFirstLine,
+        photoSecondLine: state.photoLineData.photoSecondLine
+    };
+}
+
+ThemaSearchPhotoGroup = connect(mapStateToProps)(ThemaSearchPhotoGroup);
+
     
 export default ThemaSearchPhotoGroup;

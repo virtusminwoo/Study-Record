@@ -1,15 +1,16 @@
 import React from 'react';
-import LoginBoxTop from './LoginBoxTop';
+import LoginBoxTopForm from './LoginBoxTopForm';
 import LoginBoxBottom from './LoginBoxBottom';
 
 
 const LoginBox = () => {
+
         return (
             <div className="LoginBox">         
-                <LoginBoxTop />
+                <LoginBoxTopForm />
                 <LoginBoxBottom />
             </div>
-        );
+        )
     }
 
 

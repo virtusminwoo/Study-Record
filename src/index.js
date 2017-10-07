@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './client/Root';
+import Root from './containers/Root';
 import './index.css';
 
 

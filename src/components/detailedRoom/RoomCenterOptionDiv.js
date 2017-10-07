@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class RoomCenterOptionDiv extends Component {
-    render() {
+const RoomCenterOptionDiv = () => {
+
         return (
             <div className="RoomCenterOptionDiv">
                 <h3>옵션</h3>
                 <br />
-                <img src={require("../../images/roomOption.png")} alt="" />
+                <img src={require("../../images/DetailedRoom/detailedRoomOption.png")} alt="" />
             </div>
-        );
+        )
     }
-}
 
 export default RoomCenterOptionDiv;

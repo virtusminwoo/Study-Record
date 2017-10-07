@@ -26,10 +26,10 @@ export class RoomCenterGoogleMapDiv extends Component {
 
                     </Map>
                     
-                    <img className="RoomCenterGoogleMapBottom" src ={require("../../images/detailedRoomMap.png")} alt="" />
+                    <img className="RoomCenterGoogleMapBottom" src ={require("../../images/DetailedRoom/detailedRoomMap.png")} alt="" />
                 </div>
             </div>
-        );
+        )
     }
 }
 

@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ShowDeposit extends Component {
-    render() {
+const ShowDeposit = () => {
         return (
             <div className="CommonShow ShowDeposit">      
                 <div className="CommonShowTop">   
@@ -49,8 +48,8 @@ class ShowDeposit extends Component {
                         </ul>
                     </div>
             </div>
-        );
+        )
     }
-}
+
 
 export default ShowDeposit;

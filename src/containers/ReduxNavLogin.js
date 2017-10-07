@@ -1,5 +1,5 @@
 import NavLogin from '../components/NavLogin';
-import * as actions from '../actions';
+import * as actions from '../actions/modalActionCreators';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({

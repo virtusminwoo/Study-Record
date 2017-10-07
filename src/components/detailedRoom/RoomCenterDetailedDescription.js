@@ -1,6 +1,7 @@
 import React from 'react';
 
 const RoomCenterDetailedDescription = (props) => {
+
         return (
             <div className="RoomCenterDetailedDescription">
                 <div className="RoomCenterDetailedDescriptionDiv">
@@ -14,8 +15,7 @@ const RoomCenterDetailedDescription = (props) => {
                     <hr className="RoomCenterDetailedDescriptionDivHr"/>
                 </div>
             </div>
-        );
+        )
     }
-
 
 export default RoomCenterDetailedDescription;

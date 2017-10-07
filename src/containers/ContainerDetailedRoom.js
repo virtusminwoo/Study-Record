@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import detailedRoomsAPI from '../data/detailedRoomsAPI'
+import roomsApi from '../data/roomsApi'
 
 import ContainerHeader from './ContainerHeader';
 import PhotoSlideDiv from '../components/detailedRoom/PhotoSlideDiv'
@@ -12,8 +12,6 @@ import ContainerFooter from './ContainerFooter'
 
 
 
-import FixedRightDescriptionDivTop from '../components/detailedRoom/FixedRightDescriptionDivTop'
-import FixedRightDescriptionDivBottom from '../components/detailedRoom/FixedRightDescriptionDivBottom'
 
 class DetailedRoomWrapper extends Component {
     constructor(props) {
@@ -23,8 +21,6 @@ class DetailedRoomWrapper extends Component {
             absoluteDiv : false
         }
     }
-
-   
 
     absoluteBoolean(){
         var windowScrollY = window.scrollY;
@@ -44,10 +40,9 @@ class DetailedRoomWrapper extends Component {
         }
     }
 
-
     render() {
 
-    const room = detailedRoomsAPI.get(
+    const room = roomsApi.get(
         parseInt(this.props.match.params.id, 10)
     )
 
@@ -72,16 +67,10 @@ class DetailedRoomWrapper extends Component {
                 <RoomCenterOptionDiv />
                 <RoomCenterDetailedDescription roomDesc={roomDesc()}/>
                 <RoomCenterGoogleMapDiv markLat={room.markerLat} markLng={room.markerLng}/>
-                <div className={isabsoluteDiv? "FixedRightDescriptionDivAbsolute" : "FixedRightDescriptionWrapper"}>
-                    <div className={"FixedRightDescriptionDiv"}>
-                        <FixedRightDescriptionDivTop room={room} />
-                        <FixedRightDescriptionDivBottom room={room} />
-                    </div>
-                </div>
+                <ContainerFixedRightDescriptionDiv isabsoluteDiv={isabsoluteDiv} room={room}/>
                 <ContainerFooter />
             </div>
-        );
-        }
+        )}
     }
 
 

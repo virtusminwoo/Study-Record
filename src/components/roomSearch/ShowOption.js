@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
+import InputCheckBox from './InputCheckBox'
 
-class ShowOption extends Component {
-    render() {
+const ShowOption = () => {
+
         return (
             <div className="CommonShow ShowOption">         
                 <h4> 추가옵션 </h4>  
                 <ul>
-                    <li> <input type="checkbox" id="option1"/><label htmlFor="option1"> 주차가능</label></li>
-                    <li> <input type="checkbox" id="option2"/><label htmlFor="option2"> 반려동물</label></li>
-                    <li> <input type="checkbox" id="option3"/><label htmlFor="option3"> 단기임대</label></li>
-                    <li> <input type="checkbox" id="option4"/><label htmlFor="option4"> 360도매물</label></li>
+                    <InputCheckBox id={"option1"} htmlFor={"option1"} text={"주차가능"}/>
+                    <InputCheckBox id={"option2"} htmlFor={"option2"} text={"반려동물"}/>
+                    <InputCheckBox id={"option3"} htmlFor={"option3"} text={"단기임대"}/>
+                    <InputCheckBox id={"option4"} htmlFor={"option4"} text={"360도매물"}/>
                     <hr />
-                    <li> <input type="checkbox" id="option5"/><label htmlFor="option5"> 5평 이하</label></li>
-                    <li> <input type="checkbox" id="option6"/><label htmlFor="option6"> 5평~10평 이하</label></li>
-                    <li> <input type="checkbox" id="option7"/><label htmlFor="option7"> 10평 이상</label></li>
+                    <InputCheckBox id={"option5"} htmlFor={"option5"} text={"5평 이하"}/>
+                    <InputCheckBox id={"option6"} htmlFor={"option6"} text={"5평~10평 이하"}/>
+                    <InputCheckBox id={"option7"} htmlFor={"option7"} text={"10평 이상"}/>
                     <hr />
-                    <li> <input type="checkbox" id="option8"/><label htmlFor="option8"> 반지하</label></li>
-                    <li> <input type="checkbox" id="option9"/><label htmlFor="option9"> 저층 1층~3층</label></li>
-                    <li> <input type="checkbox" id="option10"/><label htmlFor="option10"> 중층 4층~6층</label></li>
-                    <li> <input type="checkbox" id="option11"/><label htmlFor="option11"> 고층 7층</label></li>
-                    <li> <input type="checkbox" id="option12"/><label htmlFor="option12"> 옥탑</label></li>
+                    <InputCheckBox id={"option8"} htmlFor={"option8"} text={"반지하"}/>
+                    <InputCheckBox id={"option9"} htmlFor={"option9"} text={"저층 1층~3층"}/>
+                    <InputCheckBox id={"option10"} htmlFor={"option10"} text={"중층 4층~6층"}/>
+                    <InputCheckBox id={"option11"} htmlFor={"option11"} text={"고층 7층"}/>
+                    <InputCheckBox id={"option12"} htmlFor={"option12"} text={"옥탑"}/>
                 </ul>
             </div>
-        );
+        )
     }
-}
 
 export default ShowOption;

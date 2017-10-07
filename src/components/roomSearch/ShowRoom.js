@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import InputCheckBox from './InputCheckBox'
 
-class ShowRoom extends Component {
-    render() {
+const ShowRoom = () => {
+
         return (
             <div className="CommonShow ShowRoom">         
                 <h4> 방 종류 </h4>  
                 <ul>
-                    <li> <input type="checkbox" defaultChecked id="deal1"/><label htmlFor="deal1"> 전체</label></li>
-                    <li> <input type="checkbox"  id="deal2"/><label htmlFor="deal2"> 원룸</label></li>
-                    <li> <input type="checkbox"  id="deal3"/><label htmlFor="deal3"> 1.5룸</label></li>
-                    <li> <input type="checkbox"  id="deal4"/><label htmlFor="deal4"> 투룸</label></li>
-                    <li> <input type="checkbox"  id="deal5"/><label htmlFor="deal5"> 쓰리룸</label></li>
-                    <li> <input type="checkbox"  id="deal6"/><label htmlFor="deal6"> 오피스텔</label></li>
-                    <li> <input type="checkbox"  id="deal7"/><label htmlFor="deal7"> 아파트</label></li>
+                    <li> <input type="checkbox" defaultChecked id="room1"/><label htmlFor="room1"> 전체</label></li>
+                    <InputCheckBox id={"room2"} htmlFor={"room2"} text={"원룸"}/>
+                    <InputCheckBox id={"room3"} htmlFor={"room3"} text={"1.5룸"}/>
+                    <InputCheckBox id={"room4"} htmlFor={"room4"} text={"투룸"}/>
+                    <InputCheckBox id={"room5"} htmlFor={"room5"} text={"쓰리룸"}/>
+                    <InputCheckBox id={"room6"} htmlFor={"room6"} text={"오피스텔"}/>
+                    <InputCheckBox id={"room7"} htmlFor={"room7"} text={"아파트"}/>
                 </ul>
             </div>
-        );
+        )
     }
-}
 
 export default ShowRoom;

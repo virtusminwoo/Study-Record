@@ -1,14 +1,14 @@
 import ProductNavLeftTable from '../components/roomSearch/ProductNavLeftTable';
-import * as actions from '../actions';
+import * as actions from '../actions/dropDownActionCreators';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
-    showProduct: state.showDownData.showProduct,
-    showDeal : state.showDownData.showDeal,
-    showRoom : state.showDownData.showRoom,
-    showDeposit : state.showDownData.showDeposit,
-    showFee : state.showDownData.showFee,
-    showOption : state.showDownData.showOption
+    showProduct: state.dropDownData.showProduct,
+    showDeal : state.dropDownData.showDeal,
+    showRoom : state.dropDownData.showRoom,
+    showDeposit : state.dropDownData.showDeposit,
+    showFee : state.dropDownData.showFee,
+    showOption : state.dropDownData.showOption
 });
 
 

@@ -1,16 +1,15 @@
 import { combineReducers } from 'redux'
 
-import marker from './marker';
 import modal from './modal';
-import loginValidation from './loginValidation';
-import showDown from './showDown'
-
+import dropDown from './dropDown'
+import photoLine from './photoLine'
+import navSiteGroup from './navSiteGroup'
 
 const pushActions = combineReducers({
     modalData : modal,
-    markerData : marker,
-    loginValidationData : loginValidation,
-    showDownData : showDown
+    dropDownData : dropDown,
+    photoLineData : photoLine,
+    navSiteGroupData: navSiteGroup
 })
 
 

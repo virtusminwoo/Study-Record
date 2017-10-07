@@ -19,7 +19,7 @@ export class MapContainer extends Component {
             {lat: 37.537926, lng: 126.996022},
             {lat: 37.600667, lng: 127.098561},
             {lat: 37.502579, lng: 127.090326}
-        ];
+        ]
 
         return (
             <div className="MapContainerDiv">
@@ -46,7 +46,7 @@ export class MapContainer extends Component {
                 </Map>
             </div>
             </div>
-        );
+        )
     }
     }
 

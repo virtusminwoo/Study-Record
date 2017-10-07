@@ -21,7 +21,7 @@ const PhotoSlideDiv = (props) => {
                     {props.room.roomPhoto}
                 </Swiper>
             </div>
-        );
+        )
     }
 
 

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import LoginBox from './LoginBox';
+import NavLoginLi from './NavLoginLi';
 
 
  const NavLogin = ({showModal,OpenModal, CloseModal}) => {
+
     let loginModal;
     if(showModal===true){
         loginModal = (
@@ -23,29 +24,12 @@ import LoginBox from './LoginBox';
     return (
             <div className="NavLoginDiv">
                 <ul>
-                    <li>
-                        <Link to='#' className="NavLink" >
-                            공인중개사 회원가입
-                        </Link>
-                    </li>
-                    <li onClick={OpenModal}>
-                        <Link to='#' className="NavLink" >
-                            회원가입 및 로그인
-                        </Link>
-                    </li>
+                    <NavLoginLi liText={"공인중개사 회원가입"} />
+                    <NavLoginLi liText={"회원가입 및 로그인"} onClick={OpenModal}/>
                     {loginModal}
                 </ul>
             </div>
-
-    );
-};
-
-
-NavLogin.defaultProps = {
-    showModal: false
-};
-
-
-
+        )
+    }
 
 export default NavLogin;

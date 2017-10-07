@@ -2,6 +2,7 @@ import React from 'react';
 import FixedRightDescriptionDivTopRoom from './FixedRightDescriptionDivTopRoom'
 
 const FixedRightDescriptionDivTop = (props) => {
+
         return (
             <div className="FixedRightDescriptionDivTop">
                 <div className="FixedRightDescriptionDivTopRoom">
@@ -17,7 +18,7 @@ const FixedRightDescriptionDivTop = (props) => {
 
                 <FixedRightDescriptionDivTopRoom />
             </div>
-        );
+        )
     }
 
 

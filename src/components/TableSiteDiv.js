@@ -1,6 +1,7 @@
 import React from 'react';
 
 const TableSiteDiv = () => {
+    
         return (
             <div className="TableSiteDiv">
                 <hr className="TableSiteDivHr" />
@@ -16,7 +17,7 @@ const TableSiteDiv = () => {
                     </tr>
                 </table>
             </div>
-        );
+        )
     }
 
 

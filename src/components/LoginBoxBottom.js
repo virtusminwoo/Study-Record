@@ -1,6 +1,7 @@
 import React from 'react';
 
 const LoginBoxBottom = () => {
+
         return (
             <div className="LoginBoxBottom">
                 <ul className="LoginOption">
@@ -19,7 +20,7 @@ const LoginBoxBottom = () => {
                     <a href = "#" className="ProRegister">공인중개사 회원가입</a>
                 </div>
             </div>
-        );
+        )
     }
 
 export default LoginBoxBottom;

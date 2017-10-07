@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ProductNavRight extends Component {
-    render() {
+const ProductNavRight = () => {
+
         return (
             <div className="ProductNavRight">
                 <ul className="ProductNavRightUl">
@@ -9,8 +9,8 @@ class ProductNavRight extends Component {
                     <li>리스트</li>
                 </ul>
             </div>
-        );
+        )
     }
-}
+
 
 export default ProductNavRight;

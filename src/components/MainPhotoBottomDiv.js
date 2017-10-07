@@ -1,6 +1,7 @@
 import React from 'react';
 
 const MainPhotoBottomDiv = () => {
+
     return (
         <div className="MainPhotoDiv">
              <div className="MainPhotoBottomDiv">   
@@ -8,8 +9,7 @@ const MainPhotoBottomDiv = () => {
                 <button type="submit" className="MainPhotoBottomButton">방 검색</button>
             </div>
         </div>
-    );
-};
-
+    )
+}
 
 export default MainPhotoBottomDiv;
