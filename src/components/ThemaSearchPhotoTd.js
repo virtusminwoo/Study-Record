@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ThemaSearchPhotoSecondLine = (props) => {
+const ThemaSearchPhotoTd = (props) => {
 
         return(
             <td>
                 <figure>
                     <Link to='/roomsearch'>
-                        <img src={props.ThemaPhotoSecondLineData.photo} alt="" />
+                        <img src={props.photo} alt="" />
                             <div className="ThemaSentence">
-                                <h3>{props.ThemaPhotoSecondLineData.title}</h3>
+                                <h3>{props.title}</h3>
                                 <hr />
-                                <p>{props.ThemaPhotoSecondLineData.description}</p>
+                                <p>{props.description}</p>
                             </div>
                     </Link>
                 </figure>
@@ -20,4 +20,4 @@ const ThemaSearchPhotoSecondLine = (props) => {
     }
     
 
-export default ThemaSearchPhotoSecondLine;
+export default ThemaSearchPhotoTd;

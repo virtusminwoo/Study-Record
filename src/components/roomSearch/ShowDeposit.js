@@ -1,4 +1,5 @@
 import React from 'react';
+import ShowUl from './ShowUl';
 
 const ShowDeposit = () => {
         return (
@@ -11,42 +12,8 @@ const ShowDeposit = () => {
                     <input type="number" min="0" max="999999" value="999999" step="1" />
                     <hr />
                 </div>
-                    <div className="ShowDepositDivLeft">
-                        <ul className="ShowDepositUlLeft">
-                            <li>0 만원</li>
-                            <li>100 만원</li>
-                            <li>500 만원</li>
-                            <li>1,000 만원</li>
-                            <li>2,000 만원</li>
-                            <li>3,000 만원</li>
-                            <li>4,000 만원</li>
-                            <li>5,000 만원</li>
-                            <li>6,000 만원</li>
-                            <li>7,000 만원</li>
-                            <li>8,000 만원</li>
-                            <li>9,000 만원</li>
-                            <li>10,000 만원</li>
-                            <li>무제한</li>
-                        </ul>
-                    </div>
-                    <div className="ShowDepositDivRight">
-                        <ul className="ShowDepositUlRight">
-                            <li>0 만원</li>
-                            <li>100 만원</li>
-                            <li>500 만원</li>
-                            <li>1,000 만원</li>
-                            <li>2,000 만원</li>
-                            <li>3,000 만원</li>
-                            <li>4,000 만원</li>
-                            <li>5,000 만원</li>
-                            <li>6,000 만원</li>
-                            <li>7,000 만원</li>
-                            <li>8,000 만원</li>
-                            <li>9,000 만원</li>
-                            <li>10,000 만원</li>
-                            <li>무제한</li>
-                        </ul>
-                    </div>
+                    <ShowUl divClassName="ShowDepositDivLeft" ulClassName="ShowDepositUlLeft" liData={["0 만원","100 만원","500 만원","1,000 만원","2,000 만원","3,000 만원","4,000 만원","5,000 만원","6,000 만원","7,000 만원","8,000 만원","9,000 만원","10,000 만원","무제한"]} />
+                    <ShowUl divClassName="ShowDepositDivRight" ulClassName="ShowDepositUlRight" liData={["0 만원","100 만원","500 만원","1,000 만원","2,000 만원","3,000 만원","4,000 만원","5,000 만원","6,000 만원","7,000 만원","8,000 만원","9,000 만원","10,000 만원","무제한"]} />
             </div>
         )
     }

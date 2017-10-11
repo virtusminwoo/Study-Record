@@ -42,12 +42,12 @@ class DetailedRoomWrapper extends Component {
 
     render() {
 
-    const room = roomsApi.get(
+    const room = roomsApi.indexFilter(
         parseInt(this.props.match.params.id, 10)
     )
 
     const roomDesc = function(props){
-        const rooms = room.detailedDescription.map((room, index) => 
+        const rooms = room[0].detailedDescription.map((room, index) => 
                 <p key={index}>{room}</p>
             )
             return (
@@ -62,12 +62,12 @@ class DetailedRoomWrapper extends Component {
             <div ref='contents' className="DetailedRoomWrapper" onWheel={this.absoluteBoolean.bind(this)}>
                 <ContainerHeader />
                 <hr className="HeaderGroupHr" />
-                <PhotoSlideDiv room={room} />
-                <RoomCenterDescriptionTableDiv room={room}/>
+                <PhotoSlideDiv room={room[0]} />
+                <RoomCenterDescriptionTableDiv room={room[0]}/>
                 <RoomCenterOptionDiv />
                 <RoomCenterDetailedDescription roomDesc={roomDesc()}/>
-                <RoomCenterGoogleMapDiv markLat={room.markerLat} markLng={room.markerLng}/>
-                <ContainerFixedRightDescriptionDiv isabsoluteDiv={isabsoluteDiv} room={room}/>
+                <RoomCenterGoogleMapDiv markLat={room[0].markerLat} markLng={room[0].markerLng}/>
+                <ContainerFixedRightDescriptionDiv isabsoluteDiv={isabsoluteDiv} room={room[0]}/>
                 <ContainerFooter />
             </div>
         )}

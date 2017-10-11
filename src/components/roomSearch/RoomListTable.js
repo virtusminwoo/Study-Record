@@ -6,9 +6,7 @@ const RoomListTable = (props) => {
             <div>
                 <table className="RoomListTable">
                     <tbody>
-                        <tr >
                             {props.RoomListTableTdData}
-                        </tr>
                     </tbody>
                 </table>
             </div>

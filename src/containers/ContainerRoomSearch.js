@@ -48,5 +48,4 @@ class ContainerRoomSearch extends Component {
     }
 
 
-
 export default ContainerRoomSearch;

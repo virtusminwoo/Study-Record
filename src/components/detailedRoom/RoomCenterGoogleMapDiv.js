@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 export class RoomCenterGoogleMapDiv extends Component {
+
     render() {
         var style={
             position : 'relative', 
@@ -34,5 +35,6 @@ export class RoomCenterGoogleMapDiv extends Component {
 }
 
     export default GoogleApiWrapper({
-    apiKey: ('AIzaSyAaqBqLxotrHuE5i8yhR_V5uC39SqcV0BY')
+    apiKey: ('AIzaSyAaqBqLxotrHuE5i8yhR_V5uC39SqcV0BY'),
+    version: '3'
     })(RoomCenterGoogleMapDiv)

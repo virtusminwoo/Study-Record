@@ -1,5 +1,5 @@
 import React from 'react';
-import ThemaSearchPhotoGroup from './ThemaSearchPhotoGroup';
+import ThemaSearchPhotoTable from './ThemaSearchPhotoTable';
 
 
 const ThemaSearchGroup = () => {
@@ -10,7 +10,7 @@ const ThemaSearchGroup = () => {
                     <h1>테마 검색</h1>
                     <p>다방의 다양한 검색 조건으로 방을 찾아보세요.</p>
                 </div>
-                <ThemaSearchPhotoGroup />
+                <ThemaSearchPhotoTable />
             </div>
         )
     }

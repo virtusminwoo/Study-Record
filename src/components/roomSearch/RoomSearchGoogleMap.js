@@ -27,7 +27,7 @@ export class MapContainer extends Component {
                 <Map google={this.props.google} zoom={11}
                     initialCenter={{
                     lat: 37.497640,
-                    lng: 127.027139
+                    lng: 127.027139,
                 }}>
                     
                     
@@ -35,6 +35,7 @@ export class MapContainer extends Component {
                     title={'detailedRoom'}
                     name={'detailedRoom'}
                     position={{lat: this.props.markLat, lng: this.props.markLng}} />
+
 
                 <Polygon
                     paths={triangleCoords}

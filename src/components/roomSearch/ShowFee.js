@@ -1,4 +1,5 @@
 import React from 'react';
+import ShowUl from './ShowUl'
 
 const ShowFee = () => {
         return (
@@ -10,39 +11,9 @@ const ShowFee = () => {
                     <input type="number" min="0" max="999999" value="999999" step="1" />
                     <hr />
                 </div>
-                    <div className="ShowFeeDivLeft">
-                        <ul className="ShowFeeUlLeft">
-                            <li>0 만원</li>
-                            <li>10 만원</li>
-                            <li>20 만원</li>
-                            <li>30 만원</li>
-                            <li>40 만원</li>
-                            <li>50 만원</li>
-                            <li>60 만원</li>
-                            <li>70 만원</li>
-                            <li>80 만원</li>
-                            <li>90 만원</li>
-                            <li>100 만원</li>
-                            <li>무제한</li>
-                        </ul>
-                    </div>
-                    <div className="ShowFeeDivRight">
-                        <ul className="ShowFeeUlRight">
-                            <li>0 만원</li>
-                            <li>10 만원</li>
-                            <li>20 만원</li>
-                            <li>30 만원</li>
-                            <li>40 만원</li>
-                            <li>50 만원</li>
-                            <li>60 만원</li>
-                            <li>70 만원</li>
-                            <li>80 만원</li>
-                            <li>90 만원</li>
-                            <li>100 만원</li>
-                            <li>무제한</li>
-                        </ul>
-                    </div>
-                </div>
+                    <ShowUl divClassName="ShowFeeDivLeft" ulClassName="ShowFeeUlLeft" liData={["0 만원","10 만원","20 만원","30 만원","40 만원","50 만원","60 만원","70 만원","80 만원","90 만원","100 만원","무제한"]} />
+                    <ShowUl divClassName="ShowFeeDivRight" ulClassName="ShowFeeUlRight" liData={["0 만원","10 만원","20 만원","30 만원","40 만원","50 만원","60 만원","70 만원","80 만원","90 만원","100 만원","무제한"]} />
+            </div>
         )
     }
 

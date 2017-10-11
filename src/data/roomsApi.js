@@ -14,13 +14,16 @@ const RoomAPI = {
             "#주차", 
             "#반려동물"
         ],
-        "depositFee" : "1000/100",
+        "deposit" : 1000,
+        "rentalFee" : 100,
         "theFloor" : 10,
         "entireFloor" : 19,
         "entireArea" : 52.4,
         "theArea" : 24.6,
         "administrativeFee" : 0,
-        "administrativeType" : "청소비",
+        "administrativeType" : [
+            "cleaningCost"
+        ],
         "heatingType" : "개별난방",
         "pet" : true,
         "park" : true,
@@ -64,13 +67,17 @@ const RoomAPI = {
             "#단기가능",
             "#반려동물"
         ],
-        "depositFee" : "85/85",
+        "deposit" : 85,
+        "rentalFee" : 85,
         "theFloor" : 2,
         "entireFloor" : 4,
         "entireArea" : 36.3,
         "theArea" : 29.7,
         "administrativeFee" : 0,
-        "administrativeType" : "-",
+        "administrativeType" : [
+            "waterRates",
+            "internet"
+        ],
         "heatingType" : "개별난방",
         "pet" : true,
         "park" : true,
@@ -111,13 +118,16 @@ const RoomAPI = {
         "hashDescription" : [
             "#주차"
         ],
-        "depositFee" : "1억7000",
+        "deposit" : "1억7000",
+        "rentalFee" : 0,
         "theFloor" : 4,
         "entireFloor" : 6,
         "entireArea" : 49.5,
         "theArea" : 42.9,
         "administrativeFee" : 3,
-        "administrativeType" : "청소비",
+        "administrativeType" : [
+            "cleaningCost"
+        ],
         "heatingType" : "개별난방",
         "pet" : false,
         "park" : true,
@@ -161,13 +171,16 @@ const RoomAPI = {
         "hashDescription" : [
             "#주차"
         ],
-        "depositFee" : "3000/45",
+        "deposit" : 3000,
+        "rentalFee" : 45,
         "theFloor" : 4,
         "entireFloor" : 5,
         "entireArea" : 26.4,
         "theArea" : 26.4,
         "administrativeFee" : 3,
-        "administrativeType" : "-",
+        "administrativeType" : [
+            "television"
+        ],
         "heatingType" : "개별난방",
         "pet" : false,
         "park" : true,
@@ -212,13 +225,16 @@ const RoomAPI = {
             "#주차",
             "#직거래"
         ],
-        "depositFee" : "300/30",
+        "deposit" : 300,
+        "rentalFee" : 30,
         "theFloor" : 6,
         "entireFloor" : 15,
         "entireArea" : 19.8,
         "theArea" : 9.9,
         "administrativeFee" : 5,
-        "administrativeType" : "-",
+        "administrativeType" : [
+            "none"
+        ],
         "heatingType" : "개별난방",
         "pet" : false,
         "park" : true,
@@ -258,13 +274,16 @@ const RoomAPI = {
         "hashDescription" : [
             "#주차"
         ],
-        "depositFee" : "9500",
+        "deposit" : 9500,
+        "rentalFee" : 0,
         "theFloor" : 9,
         "entireFloor" : 10,
         "entireArea" : 40.3,
         "theArea" : 21.7,
         "administrativeFee" : 9,
-        "administrativeType" : "-",
+        "administrativeType" : [
+            "none"
+        ],
         "heatingType" : "개별난방",
         "pet" : false,
         "park" : true,
@@ -300,15 +319,17 @@ const RoomAPI = {
         "shortDescription" : "전망 좋음",
         "domicile" : "서울특별시 중랑구 망우동",
         "hashDescription" : [
-            
         ],
-        "depositFee" : "5억1000",
+        "deposit" : "5억1000",
+        "rentalFee" : 0,
         "theFloor" : 19,
         "entireFloor" : 28,
         "entireArea" : 111.3,
         "theArea" : 84.7,
         "administrativeFee" : 0,
-        "administrativeType" : "-",
+        "administrativeType" : [
+            "none"
+        ],
         "heatingType" : "개별난방",
         "pet" : false,
         "park" : false,
@@ -350,13 +371,17 @@ const RoomAPI = {
         "hashDescription" : [
             
         ],
-        "depositFee" : "1000/65",
+        "deposit" : 1000,
+        "rentalFee" : 65,
         "theFloor" : 1,
         "entireFloor" : 4,
         "entireArea" : 40.0,
         "theArea" : 40.0,
         "administrativeFee" : 0,
-        "administrativeType" : "-",
+        "administrativeType" : [
+            "internet",
+            "television"
+        ],
         "heatingType" : "개별난방",
         "pet" : false,
         "park" : false,
@@ -396,13 +421,17 @@ const RoomAPI = {
             "#단기가능",
             "#주차"
         ],
-        "depositFee" : "2000/60",
+        "deposit" : 2000,
+        "rentalFee" : 60,
         "theFloor" : 2,
         "entireFloor" : 3,
         "entireArea" : 46.0,
         "theArea" : 46.0,
         "administrativeFee" : 5,
-        "administrativeType" : "수도세, 청소비",
+        "administrativeType" : [
+            "cleaningCost",
+            "waterRates"
+        ],
         "heatingType" : "개별난방",
         "pet" : false,
         "park" : true,
@@ -435,13 +464,16 @@ const RoomAPI = {
         "hashDescription" : [
             "#주차"
         ],
-        "depositFee" : "1000/90",
+        "deposit" : 1000,
+        "rentalFee" : 90,
         "theFloor" : 7,
         "entireFloor" : 40,
         "entireArea" : 75.9,
         "theArea" : 39.6,
         "administrativeFee" : 16,
-        "administrativeType" : "-",
+        "administrativeType" : [
+            "television"
+        ],
         "heatingType" : "개별난방",
         "pet" : false,
         "park" : true,
@@ -475,10 +507,14 @@ const RoomAPI = {
 
 ],
   all: function() { return this.rooms},
-  get: function(id) {
-    const isRoom = p => p.id === id
-    return this.rooms.find(isRoom)
+  indexGet: function(id){
+    return this.rooms[id]
+  },
+  indexFilter : function(id){
+      const isRoom = p => p.id === id
+    return this.rooms.filter(isRoom)
   }
 }
+
 
 export default RoomAPI

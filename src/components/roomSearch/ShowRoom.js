@@ -7,7 +7,7 @@ const ShowRoom = () => {
             <div className="CommonShow ShowRoom">         
                 <h4> 방 종류 </h4>  
                 <ul>
-                    <li> <input type="checkbox" defaultChecked id="room1"/><label htmlFor="room1"> 전체</label></li>
+                    <InputCheckBox id={"room1"} default={true} htmlFor={"room1"} text={"전체"}/>
                     <InputCheckBox id={"room2"} htmlFor={"room2"} text={"원룸"}/>
                     <InputCheckBox id={"room3"} htmlFor={"room3"} text={"1.5룸"}/>
                     <InputCheckBox id={"room4"} htmlFor={"room4"} text={"투룸"}/>
