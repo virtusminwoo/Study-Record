@@ -1,0 +1,16 @@
+
+.layoutDetailedRoom .option{
+    position : relative;
+    top : 20px;
+    left : -9%;
+    width : 82%;
+    padding-top : 30px;
+}
+
+
+.layoutDetailedRoom .option img, .layoutDetailedRoom  .option h3{
+    display: block;
+    position : relative;
+    width : 660px;
+    
+}

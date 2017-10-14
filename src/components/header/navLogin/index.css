@@ -1,0 +1,20 @@
+
+.layoutHeader .navLogin{
+    display : inline-block;
+    position : absolute;
+    right : 20px;
+    top : 20px;
+    width : 300px;
+}
+
+.layoutHeader .navLogin ul{
+    display : inline-block;
+    padding-left: 20px;
+    font-size : 12px;
+    font-weight: 100;
+}
+
+.layoutHeader .navLogin li{
+    display : inline;
+    padding-left : 30px;
+}

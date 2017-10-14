@@ -17,8 +17,8 @@ export const ClickDeposit = () => ({
     type: types.CLICK_DEPOSIT
 })
 
-export const ClickFee = () => ({
-    type: types.CLICK_FEE
+export const ClickRentalFee = () => ({
+    type: types.CLICK_RENTALFEE
 })
 
 export const ClickOption = () => ({

@@ -1,0 +1,63 @@
+
+
+.layoutRoomSearch .roomList{
+    display: inline-block;
+    position :fixed;
+    right : 0px;
+    top : 102px;
+    width : 460px;
+    height : 100%;
+    background-color: white;
+}
+
+.layoutRoomSearch .roomListResult{
+    background-color : #3B8DE0;
+    height : 40px;
+}
+
+.layoutRoomSearch .roomListResult p{
+    position : relative;
+    top : 10px;
+    width : 440px;
+    font-size : 14px;
+    color : white;
+}
+
+
+.layoutRoomSearch .roomListResult p:before{
+    content : "▶"
+}
+
+.layoutRoomSearch .roomListOverFlow{
+    height : 100%;
+    overflow-y: scroll;
+}
+
+.layoutRoomSearch .roomListAd{
+    background-color: #F7F7F7;
+    height : 40px;
+}
+
+.layoutRoomSearch .roomListAd p{
+    position : relative;
+    top : 10px;
+    width : 420px;
+    font-size : 14px;
+}
+
+.layoutRoomSearch .roomListAd p:before{
+    content: url(../../../images/roomSearch/adIcon.png);
+}
+
+.layoutRoomSearch .roomListAd span{
+    position : relative;
+    right : -400px;
+    top : -10px;
+    font-size : 14px;
+}
+
+.layoutRoomSearch .roomListTable{
+    margin : 10px;
+    width : 420px;
+    border-collapse: collapse;
+}

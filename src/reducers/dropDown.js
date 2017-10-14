@@ -2,12 +2,12 @@ import * as types from '../actions/dropDownActionTypes';
 
 
 const initialState = {
-        showProduct : false,
-        showDeal : false,
-        showRoom : false,
-        showDeposit : false,
-        showFee : false,
-        showOption : false
+        dropDownProduct : false,
+        dropDownDeal : false,
+        dropDownRoom : false,
+        dropDownDeposit : false,
+        dropDownFee : false,
+        dropDownOption : false
 };
 
 function dropDown(state = initialState, action) {
@@ -15,72 +15,72 @@ function dropDown(state = initialState, action) {
         case types.CLICK_PRODUCT: 
             return {
                 ...state,
-                showProduct: true,
-                showDeal : false,
-                showRoom : false,
-                showDeposit : false,
-                showFee : false,
-                showOption : false
+                dropDownProduct: true,
+                dropDownDeal : false,
+                dropDownRoom : false,
+                dropDownDeposit : false,
+                dropDownRentalFee : false,
+                dropDownOption : false
             };
         case types.CLICK_DEAL:
             return {
                 ...state,
-                showProduct: false,
-                showDeal : true,
-                showRoom : false,
-                showDeposit : false,
-                showFee : false,
-                showOption : false
+                dropDownProduct: false,
+                dropDownDeal : true,
+                dropDownRoom : false,
+                dropDownDeposit : false,
+                dropDownRentalFee : false,
+                dropDownOption : false
             };
         case types.CLICK_ROOM:
             return {
                 ...state,
-                showProduct: false,
-                showDeal : false,
-                showRoom : true,
-                showDeposit : false,
-                showFee : false,
-                showOption : false
+                dropDownProduct: false,
+                dropDownDeal : false,
+                dropDownRoom : true,
+                dropDownDeposit : false,
+                dropDownRentalFee : false,
+                dropDownOption : false
             };
         case types.CLICK_DEPOSIT:
             return {
                 ...state,
-                showProduct: false,
-                showDeal : false,
-                showRoom : false,
-                showDeposit : true,
-                showFee : false,
-                showOption : false
+                dropDownProduct: false,
+                dropDownDeal : false,
+                dropDownRoom : false,
+                dropDownDeposit : true,
+                dropDownFee : false,
+                dropDownOption : false
             };
-        case types.CLICK_FEE:
+        case types.CLICK_RENTALFEE:
             return {
                 ...state,
-                showProduct: false,
-                showDeal : false,
-                showRoom : false,
-                showDeposit : false,
-                showFee : true,
-                showOption : false
+                dropDownProduct: false,
+                dropDownDeal : false,
+                dropDownRoom : false,
+                dropDownDeposit : false,
+                dropDownRentalFee : true,
+                dropDownOption : false
             };
         case types.CLICK_OPTION:
             return {
                 ...state,
-                showProduct: false,
-                showDeal : false,
-                showRoom : false,
-                showDeposit : false,
-                showFee : false,
-                showOption : true
+                dropDownProduct: false,
+                dropDownDeal : false,
+                dropDownRoom : false,
+                dropDownDeposit : false,
+                dropDownRentalFee : false,
+                dropDownOption : true
             };
         case types.CLICK_SET:
             return {
                 ...state,
-                showProduct: false,
-                showDeal : false,
-                showRoom : false,
-                showDeposit : false,
-                showFee : false,
-                showOption : false
+                dropDownProduct: false,
+                dropDownDeal : false,
+                dropDownRoom : false,
+                dropDownDeposit : false,
+                dropDownRentalFee : false,
+                dropDownOption : false
             };
         default:
             return state;

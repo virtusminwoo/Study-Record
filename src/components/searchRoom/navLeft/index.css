@@ -1,0 +1,34 @@
+
+.layoutRoomSearch .navLeftDivCommon{
+    text-align: center;
+    display : inline-block;
+    padding : 0px 20px;
+    border : 1px solid #D1D1D1;
+    border-top : 0px;
+    border-bottom : 0px;
+    border-right : 0px;
+    font-size : 13px;
+    color : #585858;
+}
+
+.layoutRoomSearch .navLeftDivCommon:after{
+    content : " ▼";
+    position :relative;
+    left : 5px;
+    color : #3B8DE0;
+}
+
+.layoutRoomSearch .navLeftDivCommonOpen:after{
+    content : " ▲";
+    position :relative;
+    left : 5px;
+    color : #3B8DE0;
+}
+
+.layoutRoomSearch .navLeftDivDeposit:before{
+    content: url(../../../images/roomSearch/depositIcon.png);
+}
+
+.layoutRoomSearch .navLeftDivRentalFee:before{
+    content: url(../../../images/roomSearch/rentalFeeIcon.png);
+}
