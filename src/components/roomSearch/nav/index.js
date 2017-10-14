@@ -8,9 +8,9 @@ import './index.css';
 const Nav = () => {
 
         return (
-            <div className="searchRoomNav">
+            <div className="roomSearchNav">
                 <NavLeft />
-                <div className="searchRoomNavRight">
+                <div className="roomSearchNavRight">
                     <Li items={messages.navRightUl.items} />
                 </div>
             </div>

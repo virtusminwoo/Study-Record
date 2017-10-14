@@ -1,18 +1,18 @@
 
-.layoutRoomSearch .searchRoomNav{
+.layoutRoomSearch .roomSearchNav{
     background-color: #F7F7F7;
     height : 40px;
     width : 100%;
 }
 
 
-.layoutRoomSearch .searchRoomNavRight{
+.layoutRoomSearch .roomSearchNavRight{
     position : absolute;
     top : 65px;
     right : 50px;
 }
 
-.layoutRoomSearch .searchRoomNavRight li{
+.layoutRoomSearch .roomSearchNavRight li{
     position : relative;
     left : 30px;
     font-size : 13px;

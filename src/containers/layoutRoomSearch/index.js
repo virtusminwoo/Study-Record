@@ -4,10 +4,10 @@ import './index.css'
 
 
 import LayoutHeader from '../layoutHeader'
-import Nav from '../../components/searchRoom/nav'
-import GoogleMap from '../../components/searchRoom/googleMap'
-import RoomList from '../../components/searchRoom/roomList'
-import RoomListTable from '../../components/searchRoom/roomListTable'
+import Nav from '../../components/roomSearch/nav'
+import GoogleMap from '../../components/roomSearch/googleMap'
+import RoomList from '../../components/roomSearch/roomList'
+import RoomListTable from '../../components/roomSearch/roomListTable'
 
 class LayoutRoomSearch extends Component { 
     constructor(){
