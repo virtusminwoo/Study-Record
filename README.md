@@ -43,13 +43,13 @@
 >:   상세매물화면
 > 
 				 sidebar position : fixed & absolute
-                 매물 이미지 swipe
+				 매물 이미지 swipe
 				 
 >header  로그인버튼 클릭
 >: 로그인 modal화면
 > 
-				  modal
-                  form validation
+				 modal
+				 form validation
 
 ----------
 > **자세한 사항:**
