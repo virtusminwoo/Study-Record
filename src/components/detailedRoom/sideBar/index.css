@@ -3,28 +3,30 @@
 
 .layoutDetailedRoom .sideBarBasic{
     position : fixed;
-    top : 75px;
-    left : 70%;
-    width : 250px;
+    top : 102px;
+    right : 45%;
+    width: 250px;
+    margin-right: -480px;
     padding : 20px 20px;
     border : 1px solid #D1D1D1;
     z-index : 3;
-    background-color : white;
+    background-color : white;    
 }
 
 .layoutDetailedRoom .sideBarAbsolute{
-    position : relative;
-    height : 0px;
-    bottom : 1670px;
-    left : 500px;
-    width : 250px;
+    position : absolute;
+    right : 45%;
+    width: 250px;
+    margin-right: -480px;
     padding : 20px 20px;
     border : 1px solid #D1D1D1;
     z-index : 3;
     background-color : white;
 }
 
-
+.layoutDetailedRoom .sideBar{
+    width : 300px;
+}
 
 
 

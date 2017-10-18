@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import messages from './messages'
 
 const SideBarBottom = (props) => {
     
@@ -8,14 +9,14 @@ const SideBarBottom = (props) => {
                 <div className="sideBarBottomBackground">
                     <div className="sideBarBottomAgent">
                         <h3>{props.room.agentOffice}</h3>
-                        <p className="agentOfficeRepresentative">대표 : {props.room.agentOfficeRepresentative}</p>
-                        <p className="realEstateAgent">[담당자] {props.room.realEstateAgent}</p>
+                        <p className="agentOfficeRepresentative">{messages.sideBarBottomAgent.representativeText}{props.room.agentOfficeRepresentative}</p>
+                        <p className="realEstateAgent">{messages.sideBarBottomAgent.agentText}{props.room.realEstateAgent}</p>
                         <p className="agentOfficeAddress">{props.room.agentOfficeAddress}</p>
-                        <p className="registrationNumber">중개등록번호 {props.room.registrationNumber}</p>
-                        <p className="confirm">중개사와의 거래 시 수수료가 발생하니 참고하세요</p>
+                        <p className="registrationNumber">{messages.sideBarBottomAgent.registrationNumberText}{props.room.registrationNumber}</p>
+                        <p className="confirm">{messages.sideBarBottomAgent.confirmText}</p>
                     </div>
                     <div className="sideBarBottomAgentPhone">
-                        <p> ☎ 연락처보기 </p>
+                        <p>{messages.sideBarBottomAgent.agentPhoneText}</p>
                     </div> 
                 </div>
             </div>

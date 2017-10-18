@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import './index.css'
+import * as actions from '../../actions/sideBarPositionActionCreators';
 
 import LayoutHeader from '../layoutHeader'
 import SwipePhoto from '../../components/detailedRoom/swipePhoto'
@@ -14,31 +15,21 @@ import LayoutFooter from '../layoutFooter'
 
 
 class LayoutDetailedRoom extends Component {
-    constructor() {
-    super();
-    this.state={
-            scrollHeight : '',
-            absoluteDiv : false
-        }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.absoluteBoolean.bind(this))
     }
 
     absoluteBoolean(){
-        var windowScrollY = window.scrollY;
-        var nowScrollHeight = this.refs.contents.scrollHeight;
-        if(windowScrollY >= nowScrollHeight - 2100){
-            console.log( windowScrollY)
-            this.setState({
-                scrollHeight : windowScrollY,
-                absoluteDiv : true
-            })
-        } else if(windowScrollY <= nowScrollHeight - 2100){
-            console.log( windowScrollY)
-            this.setState({
-                scrollHeight : windowScrollY,
-                absoluteDiv : false
-            })
+        var currentScrollY = document.documentElement.scrollTop;
+        var scrollHeight = document.body.scrollHeight;
+        if(currentScrollY >= scrollHeight - 2030){
+            return this.props.sideBarPositionAbsolute()
+        } else if(currentScrollY < scrollHeight - 2030){
+            return this.props.sideBarPositionFixed()
         }
     }
+    
 
     render() {
 
@@ -51,24 +42,25 @@ class LayoutDetailedRoom extends Component {
                 <p key={index}>{room}</p>
             )
             return (
-                <p>{rooms}</p>
+                <div>{rooms}</div>
             )     
     }
 
 
-    const isabsoluteDiv = this.state.absoluteDiv
+    const isabsoluteDiv = this.props.absoluteDiv
 
         return (
-            console.log(room),
-            <div ref='contents' className="layoutDetailedRoom" onWheel={this.absoluteBoolean.bind(this)}>
+            <div className="layoutDetailedRoom">
                 <LayoutHeader />
                 <hr className="headerHr" />
-                <SwipePhoto room={room[0]} />
-                <ArticleInformation room={room[0]}/>
-                <Option />
-                <Description roomDesc={roomDesc()}/>
-                <GoogleMap markLat={room[0].markerLat} markLng={room[0].markerLng}/>
-                <SideBar isabsoluteDiv={isabsoluteDiv} room={room[0]}/>
+                <div className="detailedRoomMain">
+                    <SwipePhoto room={room[0]} />
+                    <SideBar isabsoluteDiv={isabsoluteDiv} room={room[0]}/>
+                    <ArticleInformation room={room[0]}/>
+                    <Option />
+                    <Description roomDesc={roomDesc()}/>
+                    <GoogleMap markLat={room[0].markerLat} markLng={room[0].markerLng}/>
+                </div>
                 <LayoutFooter />
             </div>
         )}
@@ -76,12 +68,22 @@ class LayoutDetailedRoom extends Component {
 
 const mapStateToProps = (state) => ({
     rooms: state.roomsInfoData.rooms,
-    indexFilter : state.roomsInfoData.indexFilter
+    indexFilter : state.roomsInfoData.indexFilter,
+    scrollHeight : state.sideBarPositionData.scrollHeight,
+    absoluteDiv : state.sideBarPositionData.absoluteDiv
 });
 
 
+const mapDispatchToProps = (dispatch) => ({
+    sideBarPositionFixed: () => dispatch(actions.sideBarPositionFixed()),
+    sideBarPositionAbsolute: () => dispatch(actions.sideBarPositionAbsolute())
+});
+
 LayoutDetailedRoom = connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(LayoutDetailedRoom);
+
+
 
 export default LayoutDetailedRoom;

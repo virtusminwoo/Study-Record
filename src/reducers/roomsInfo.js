@@ -1,4 +1,8 @@
+import * as types from '../actions/roomsInfoActionTypes';
+
 const initialState = {
+    stateMarkerLat : '',
+    stateMarkerLng : '',
     rooms: [
         {
             "id" : 0,
@@ -519,8 +523,22 @@ const initialState = {
 };
 
 function roomsInfo(state = initialState, action) {
-        return state;
+        switch (action.type) {
+        case types.MOUSE_OVER: 
+            return {
+                ...state,
+                stateMarkerLat : action.e.target.dataset.markerlat,
+                stateMarkerLng : action.e.target.dataset.markerlng
+            };
+        case types.MOUSE_OUT:
+            return {
+                ...state,
+                stateMarkerLat : '',
+                stateMarkerLng : '',
+            };
+        default:
+            return state;
     }
-
+}
 
 export default roomsInfo

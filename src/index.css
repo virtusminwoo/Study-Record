@@ -121,6 +121,10 @@ body {
             }
 
             .layoutApp{
-                background-position: top 60px left -750px;
+                background-position: top 60px left -570px;
+            }
+
+            .layoutDetailedRoom .detailedRoomMain{
+                width : 1050px;
             }
         }

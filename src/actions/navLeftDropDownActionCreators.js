@@ -1,6 +1,5 @@
-import * as types from './dropDownActionTypes'
+import * as types from './navLeftDropDownActionTypes'
 
-//showDown
 export const ClickProduct = () => ({
     type: types.CLICK_PRODUCT
 })

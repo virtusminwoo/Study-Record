@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import messages from './messages'
 
 
 const SideBarTop = (props) => {
@@ -39,7 +40,7 @@ const SideBarTop = (props) => {
 
         return (
             <div className="sideBarTop">
-                <h3>{props.room.houseType}</h3> <h3 >{props.room.contractType}</h3> <h3 className={contractTypeFunc()? "commonPriceColorBlue" : "commonPriceColorOrange"}>{depositToString(toString)}{rentalFee()} 만원</h3>
+                <h3>{props.room.houseType}</h3> <h3 >{props.room.contractType}</h3> <h3 className={contractTypeFunc()? "commonPriceColorBlue" : "commonPriceColorOrange"}>{depositToString(toString)}{rentalFee()} {messages.price.priceText}</h3>
                 <p className="simpleDescription">{props.room.shortDescription}</p>
                 <p className="address">{props.room.address}</p>
                 {hashDatas}
@@ -47,11 +48,11 @@ const SideBarTop = (props) => {
 
                 <div className="sideBarTopButtonGroup">
                     <div className="sideBarTopButton">
-                        <p className="heartIcon"> 찜 </p>
+                        <p className="heartIcon"> {messages.sideBarTopButton.heartIconText} </p>
                     </div>
                     
                     <div className="sideBarTopButton">
-                        <p className="sirenIcon"> 신고 </p>
+                        <p className="sirenIcon"> {messages.sideBarTopButton.sirenIconText} </p>
                     </div>
                 </div>
             </div>

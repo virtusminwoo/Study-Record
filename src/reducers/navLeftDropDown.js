@@ -1,4 +1,4 @@
-import * as types from '../actions/dropDownActionTypes';
+import * as types from '../actions/navLeftDropDownActionTypes';
 
 
 const initialState = {

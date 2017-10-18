@@ -2,7 +2,6 @@ import React from 'react';
 import './index.css';
 
 const Description = (props) => {
-
         return (
             <div className="description">
                 <div className="descriptionGroup">

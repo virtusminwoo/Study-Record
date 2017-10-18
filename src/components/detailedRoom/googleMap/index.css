@@ -2,8 +2,9 @@
 
 .layoutDetailedRoom .detailedRoomGoogleMap{
     position : relative;
+    margin :0px;
     top : 50px;
-    width : 82%;
+    width : 640px;
     height : 1200px;
     
 }

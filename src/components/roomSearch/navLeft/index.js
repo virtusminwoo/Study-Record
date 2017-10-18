@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import * as actions from '../../../actions/dropDownActionCreators';
+import * as actions from '../../../actions/navLeftDropDownActionCreators';
 import { connect } from 'react-redux';
 
 import NavLeftDiv from '../navLeftDiv'
@@ -62,12 +62,12 @@ class NavLeft extends Component {
 
 
 const mapStateToProps = (state) => ({
-    dropDownProduct: state.dropDownData.dropDownProduct,
-    dropDownDeal : state.dropDownData.dropDownDeal,
-    dropDownRoom : state.dropDownData.dropDownRoom,
-    dropDownDeposit : state.dropDownData.dropDownDeposit,
-    dropDownRentalFee : state.dropDownData.dropDownRentalFee,
-    dropDownOption : state.dropDownData.dropDownOption
+    dropDownProduct: state.navLeftDropDownData.dropDownProduct,
+    dropDownDeal : state.navLeftDropDownData.dropDownDeal,
+    dropDownRoom : state.navLeftDropDownData.dropDownRoom,
+    dropDownDeposit : state.navLeftDropDownData.dropDownDeposit,
+    dropDownRentalFee : state.navLeftDropDownData.dropDownRentalFee,
+    dropDownOption : state.navLeftDropDownData.dropDownOption
 });
 
 

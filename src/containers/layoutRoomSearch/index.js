@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import './index.css'
+import * as actions from '../../actions/roomsInfoActionCreators';
 
 
 import LayoutHeader from '../layoutHeader'
@@ -10,39 +11,18 @@ import RoomList from '../../components/roomSearch/roomList'
 import RoomListTable from '../../components/roomSearch/roomListTable'
 
 class LayoutRoomSearch extends Component { 
-    constructor(){
-         super();
-         this.state={
-             stateMarkerLat : '',
-             stateMarkerLng : ''
-         }
-    }
- 
-     MouseOver(e){
-         this.setState({
-             stateMarkerLat : e.target.dataset.markerlat,
-             stateMarkerLng : e.target.dataset.markerlng
-         })
-     }
-     
-     MouseOut(){
-         this.setState({
-             stateMarkerLat : '',
-             stateMarkerLng : ''
-         })
-     }
-
+    
     render(){
 
     const RoomListTableTdData = this.props.rooms.map((room, i) =>
-                <RoomListTable key = {i} rooms = {room} onMouseOver={this.MouseOver.bind(this)} onMouseOut={this.MouseOut.bind(this)} />
+                <RoomListTable key = {i} rooms = {room} onMouseOver={this.props.MouseOver} onMouseOut={this.props.MouseOut} />
             )
 
         return (
             <div className="layoutRoomSearch">
                 <LayoutHeader />
                 <Nav />
-                <GoogleMap markLat={this.state.stateMarkerLat} markLng={this.state.stateMarkerLng} />
+                <GoogleMap markLat={this.props.stateMarkerLat} markLng={this.props.stateMarkerLng} />
                 <RoomList RoomListTableTdData={RoomListTableTdData}/>
             </div>
             )
@@ -50,12 +30,20 @@ class LayoutRoomSearch extends Component {
     }
 
 const mapStateToProps = (state) => ({
-    rooms: state.roomsInfoData.rooms
+    rooms: state.roomsInfoData.rooms,
+    stateMarkerLat: state.roomsInfoData.stateMarkerLat,
+    stateMarkerLng: state.roomsInfoData.stateMarkerLng
+});
+
+const mapDispatchToProps = (dispatch) => ({
+     MouseOver: (e) => dispatch(actions.MouseOver(e)),
+     MouseOut: () => dispatch(actions.MouseOut())
 });
 
 
 LayoutRoomSearch = connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(LayoutRoomSearch);
 
 

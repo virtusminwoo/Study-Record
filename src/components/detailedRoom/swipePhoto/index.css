@@ -1,8 +1,8 @@
 .layoutDetailedRoom .swipePhoto{
     position : relative;
+    margin :0px;
     top : 20px;
-    left : -9%;
-    width : 82%;
+    width : 640px;
 }
 
 .layoutDetailedRoom .swipePhoto img{

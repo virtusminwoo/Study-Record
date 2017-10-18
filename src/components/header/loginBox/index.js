@@ -3,64 +3,38 @@ import Label from '../../../common/Label'
 import messages from './messages';
 import Li from '../../../common/Li'
 import './index.css';
+import * as actions from '../../../actions/loginBoxActionCreators';
+import { connect } from 'react-redux';
 
-class Modal extends Component {
-constructor(props){
-    super(props);
-    this.state=({
-        EmailId : "",
-        Password : "",
-        WarningMessage : "",
-        HaveMessage : false
-        })
-    }
+class LoginBox extends Component {
 
-
-    
     HandleSubmitState(e){
-        if(this.state.EmailId.length === 0 ){
-                this.setState({
-                    WarningMessage : "이메일 주소를 입력하세요",
-                    HaveMessage : true
-                })
-                setTimeout(function() { this.setState({WarningMessage : "", HaveMessage : false}); }.bind(this), 3000);
+        if(this.props.EmailId.length === 0 ){
+                this.props.HandleSubmitIfEmail()
+                setTimeout(this.props.HandleSubmitSet, 2000);
                 e.preventDefault()
-            } else if(this.state.Password.length === 0 && this.state.EmailId.length !== 0 ){
-                this.setState({
-                    WarningMessage : "비밀번호를 입력하세요",
-                    HaveMessage : true
-                })
-                setTimeout(function() { this.setState({WarningMessage : "", HaveMessage : false}); }.bind(this), 3000);
+            } else if(this.props.Password.length === 0 && this.props.EmailId.length !== 0 ){
+                this.props.HandleSubmitIfPassword()
+                setTimeout(this.props.HandleSubmitSet, 2000);
                 e.preventDefault()
             } else {
-                this.setState({
-                    WarningMessage : "이메일 주소 또는 비밀번호가 틀렸습니다.",
-                    HaveMessage : true
-                })
-                setTimeout(function() { this.setState({WarningMessage : "", HaveMessage : false}); }.bind(this), 3000);
+                this.props.HandleSubmitElse()
+                setTimeout(this.props.HandleSubmitSet, 2000);
                 e.preventDefault()
             }
     }
 
-    handleChange(e){
-         const name = e.target.name;
-         const value = e.target.value;
-         this.setState({[name]: value})
-     }
- 
-
-
     render() {
-        const isHaveMessage = this.state.HaveMessage
+        const isHaveMessage = this.props.HaveMessage
         return (
             <div className="loginBox">         
                 <div className="loginBoxTop"> 
-                <h2 className={isHaveMessage? "warningMessageH2" : ""}>{this.state.WarningMessage}</h2>
+                <h2 className={isHaveMessage? "warningMessageH2" : ""}>{this.props.WarningMessage}</h2>
                     <form className="loginForm" onSubmit={this.HandleSubmitState.bind(this)}>
                         <h1>{messages.formH1.text}</h1>
                         <div className="loginFormGroup">   
-                            <Label label={messages.labelEmail.label} type={messages.labelEmail.type} className="labelEmail" name={messages.labelEmail.name} value={this.state.EmailId} onChange={this.handleChange.bind(this)} /><br />
-                            <Label label={messages.labelPassword.label} type={messages.labelPassword.type} className="labelPassword" name={messages.labelPassword.name} value={this.state.Password} onChange={this.handleChange.bind(this)} /><br />
+                            <Label label={messages.labelEmail.label} type={messages.labelEmail.type} className="labelEmail" name={messages.labelEmail.name} value={this.props.EmailId} onChange={this.props.HandleChange} /><br />
+                            <Label label={messages.labelPassword.label} type={messages.labelPassword.type} className="labelPassword" name={messages.labelPassword.name} value={this.props.Password} onChange={this.props.HandleChange} /><br />
                             <button type={messages.buttonLogin.type} className="buttonLogin">{messages.buttonLogin.text}</button>
                         </div>
                     </form>
@@ -79,4 +53,26 @@ constructor(props){
     }
 }
 
-export default Modal;
+
+const mapStateToProps = (state) => ({
+    EmailId: state.loginBoxData.EmailId,
+    Password: state.loginBoxData.Password,
+    WarningMessage: state.loginBoxData.WarningMessage,
+    HaveMessage: state.loginBoxData.HaveMessage,
+});
+
+
+const mapDispatchToProps = (dispatch) => ({
+    HandleSubmitIfEmail: () => dispatch(actions.HandleSubmitIfEmail()),
+    HandleSubmitIfPassword: () => dispatch(actions.HandleSubmitIfPassword()),
+    HandleSubmitElse: () => dispatch(actions.HandleSubmitElse()),
+    HandleSubmitSet: () => dispatch(actions.HandleSubmitSet()),
+    HandleChange: (e) => dispatch(actions.HandleChange(e)),
+});
+
+LoginBox = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(LoginBox);
+
+export default LoginBox;

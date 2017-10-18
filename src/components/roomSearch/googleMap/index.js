@@ -5,13 +5,6 @@ import './index.css'
 export class MapContainer extends Component {
 
     render() {
-        var style={
-            display: 'inline-block',
-            position : 'relative', 
-            top : "3px",
-            width: '100%', 
-            height: '100%'
-        }
 
         var triangleCoords = [
             {lat: 37.501947, lng: 127.034821},
@@ -24,7 +17,7 @@ export class MapContainer extends Component {
 
         return (
             <div className="searchRoomGoogleMap">
-            <div style={style} >
+            <div >
                 <Map google={this.props.google} zoom={11}
                     initialCenter={{
                     lat: 37.497640,

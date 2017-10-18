@@ -1,13 +1,17 @@
 import { combineReducers } from 'redux'
 
 import modal from './modal';
-import dropDown from './dropDown'
+import navLeftDropDown from './navLeftDropDown'
 import roomsInfo from './roomsInfo'
+import sideBarPosition from './sideBarPosition'
+import loginBox from './loginBox'
 
 const pushActions = combineReducers({
     modalData : modal,
-    dropDownData : dropDown,
-    roomsInfoData : roomsInfo
+    navLeftDropDownData : navLeftDropDown,
+    roomsInfoData : roomsInfo,
+    sideBarPositionData : sideBarPosition,
+    loginBoxData : loginBox
 })
 
 

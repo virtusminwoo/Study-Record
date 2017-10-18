@@ -1,13 +1,15 @@
 
 
 .layoutRoomSearch .roomList{
-    display: inline-block;
-    position :fixed;
-    right : 0px;
-    top : 102px;
-    width : 460px;
-    height : 100%;
-    background-color: white;
+    overflow-y: hidden;
+    position: absolute;
+    top: 102px;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 460px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .layoutRoomSearch .roomListResult{
