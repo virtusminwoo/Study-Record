@@ -1,0 +1,28 @@
+
+.dropDownRentalFee{
+    width : 240px;
+    padding: 12px 0px;
+    left : 505px;
+    font-size : 14px;
+}
+
+.dropDownRentalFee input[type="number"]{
+    width : 80px;
+}
+
+.dropDownRentalFee li:hover{
+    background-color : #E5F1FE;
+}
+
+.dropDownRentalFeeDivLeft{
+    display : inline-block;
+    width : 120px;
+    text-align: left;
+    text-indent : 30px;
+}
+
+.dropDownRentalFeeDivRight{
+    display : inline-block;
+    width : 120px;
+    text-align: right;
+}

@@ -1,0 +1,31 @@
+.layoutApp .tableSite{
+    text-align: center;
+    position : relative;
+    width :100%;
+}
+
+.layoutApp .tableSiteHr{
+    border :0.5px solid #D1D1D1;
+}
+
+.layoutApp .tableSiteTable{
+    position : relative;
+    top:-1px;
+    border-collapse: collapse;
+    width :1100px;
+}
+
+.layoutApp .tableSiteTable td{
+    font-size : 13px;
+    width : 135px;
+    height : 50px;
+    border : 1px solid #D1D1D1;
+    border-top : 0px;
+    border-bottom: 0px;
+}
+
+.layoutApp .tableSiteTable td:hover{
+    background-color: #E7E7E7;
+
+}
+
