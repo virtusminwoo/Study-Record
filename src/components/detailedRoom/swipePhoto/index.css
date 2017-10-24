@@ -1,0 +1,10 @@
+.layoutDetailedRoom .swipePhoto{
+    position : relative;
+    margin :0px;
+    top : 20px;
+    width : 640px;
+}
+
+.layoutDetailedRoom .swipePhoto img{
+    display: block;
+}

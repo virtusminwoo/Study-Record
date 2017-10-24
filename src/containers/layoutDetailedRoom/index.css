@@ -1,0 +1,10 @@
+
+.layoutDetailedRoom .headerHr{
+    position : relative;
+    border-top: 1px solid #E7E7E7;
+}
+
+.layoutDetailedRoom .detailedRoomMain{
+    width : 960px;
+    margin :20px auto;
+}

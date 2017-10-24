@@ -1,0 +1,121 @@
+
+.layoutHeader .loginBox .loginBoxTop{
+    margin-top : -60px;
+}
+
+.layoutHeader .loginBox .warningMessageH2{
+    position : fixed;
+    top : 10px;
+    background-color : red;
+    color : white;
+    width : 350px;
+    height : 45px;
+    line-height: 40px;
+    border-radius: 5px;
+    text-indent: 10px;
+    font-size : 15px;
+}
+
+.layoutHeader .loginBox .loginForm{
+    padding: 15px;
+}
+
+
+.layoutHeader .loginBox .loginFormGroup{
+    margin-bottom: 5px;
+    margin-top : 25px;
+}
+
+.layoutHeader .loginBox .loginForm h1 {
+        font-size : 23px;
+        text-align: center;
+        font-weight: 600;
+        padding : 15px;
+    }
+
+.layoutHeader .loginBox .loginFormGroup label{
+    font-size : 13px;
+}
+
+.layoutHeader .loginBox .loginFormGroup input{
+    position : relative;
+    width: 250px;
+    height : 40px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid skyblue;
+    box-sizing: border-box;
+}
+
+.layoutHeader .loginBox .labelEmail {
+    right : -27px;
+}
+
+.layoutHeader .loginBox .labelPassword{
+    right : -15px;
+}
+
+.layoutHeader .loginBox .buttonLogin {
+    background-color : #3588DB;
+    width : 325px;
+    height : 50px;
+    color : white;
+    border: 0;
+    margin-top : 20px;
+    border-radius : 5px;
+}
+
+.layoutHeader .loginBox .buttonLogin:hover{
+    background-color : #2074C8;
+}
+
+.layoutHeader .loginBox .loginBoxBottom{
+    padding :0px 15px;
+}
+
+.layoutHeader .loginBox .loginBoxBottom .optionLogin{
+    text-align: center;
+    width : 280px;
+}
+
+.layoutHeader .loginBox .loginBoxBottom .optionLogin li{
+    display : inline-block;
+    font-size : 13px;
+    padding : 0px 3px;
+}
+
+.layoutHeader .loginBox .buttonKakao { 
+    margin-right: 2px;
+    background-color : yellow;
+    width : 157px;
+    height : 40px;
+    border: 1px solid black;
+    border-radius : 5px;
+}
+
+.layoutHeader .loginBox .buttonKakao:hover  {
+    background-color : #BDAB0A;
+}
+
+.layoutHeader .loginBox .buttonFacebook { 
+    margin-left: 2px;
+    background-color : darkblue;
+    color : white;
+    width : 157px;
+    height : 40px;
+    border: 1px solid black;
+    border-radius : 5px;
+    margin-top: 25px;
+}
+
+.layoutHeader .loginBox .buttonFacebook:hover{
+    background-color : #29447F;
+}
+
+.layoutHeader .loginBox .proRegisterP{
+    display : block;
+    text-align: center;
+    font-size:13px;
+    margin : -10px;
+    margin-top : 0px;
+}

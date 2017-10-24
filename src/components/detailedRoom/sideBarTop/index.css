@@ -1,0 +1,56 @@
+
+.layoutDetailedRoom .sideBarTop h3{
+    display: inline-block;
+    font-size : 18px;
+}
+
+.layoutDetailedRoom .simpleDescription{
+    color : #585858;
+    font-size : 15px;
+    padding : 5px 0px;
+}
+
+.layoutDetailedRoom .address{
+    color : #AAAAAA;
+    font-size : 14px;
+    padding : 5px 0px;
+}
+
+.layoutDetailedRoom .sideBarTop .depositFeeBlue{
+    color : blue
+}
+
+.layoutDetailedRoom .sideBarTop .depositFeeOrange{
+    color : orange
+}
+
+.layoutDetailedRoom .sideBarTopButtonDiv{
+    position : relative;
+    top : 10px;
+    text-align: center;
+}
+
+.layoutDetailedRoom .sideBarTopButton{
+    text-align: center;
+    display: inline-block;
+    color : #585858;
+    width : 110px;
+    height : 25px;
+    border : 1px solid black;
+    border-radius: 2px;
+    margin : 0px 5px;
+    font-size : 13px;
+    padding-top : 3px;
+}
+
+.layoutDetailedRoom .sideBarTopButton:hover{
+    background-color: #ECF0F5;
+}
+
+.layoutDetailedRoom .heartIcon:before{
+    content: '\2764';
+}
+
+.layoutDetailedRoom .sirenIcon:before{
+    content: '\26a0';
+}

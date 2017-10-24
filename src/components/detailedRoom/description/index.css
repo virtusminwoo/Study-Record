@@ -1,0 +1,17 @@
+
+.layoutDetailedRoom .description{
+    position : relative;
+    margin :0px;
+    top : 20px;
+    width : 640px;
+    padding-top : 50px;
+}
+
+.layoutDetailedRoom .descriptionGroup{
+    position : relative;
+    width : 100%;
+}
+
+.layoutDetailedRoom .description p{
+    padding : 15px 0px
+}
